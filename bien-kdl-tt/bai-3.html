@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<h3>Tính diện tích hình tròn</h3>
+	<p>Nhập độ dài bán kính hình tròn: <input type="number" id="r" value=0></p>
+	<input type="button" onclick="area();" value="Click me">
+	<p id="inner-here"></p>
+	<script type="text/javascript">
+		function area() {
+			let r = parseInt(document.getElementById('r').value)
+			let area = 3.14 * r * r;
+			let areafix = area.toFixed(2);
+			document.getElementById("inner-here").innerHTML = "Diện tích hình tròn: " + areafix;
+		}
+	</script>
+</body>
+</html>

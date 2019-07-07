@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<h3>Nhập điểm để tính trung bình cộng và tổng của những điểm này.</h3>
+	<p>Điểm Vật lý: <input type="number" id="vat-ly" value=0></p>
+	<p>Điểm Hóa học: <input type="number" id="hoa-hoc" value=0></p>
+	<p>Điểm Sinh học: <input type="number" id="sinh-hoc" value=0></p>
+	<input type="button" onclick="average();" value="Click me">
+	<p id="inner-here"></p>
+	<script type="text/javascript">
+		function average() {
+			let diemVatLy = parseInt(document.getElementById('vat-ly').value);
+			let diemHoaHoc = parseInt(document.getElementById('hoa-hoc').value);
+			let diemSinhHoc = parseInt(document.getElementById('sinh-hoc').value);
+			let sum = diemVatLy + diemHoaHoc + diemSinhHoc;
+			let average = sum / 3;
+			let averagefix = average.toFixed(1);
+			document.getElementById('inner-here').innerHTML = "Điểm trung bình cộng: " + averagefix + " và tổng điểm 3 môn: " + sum;
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<p>Chọn tháng: 
+
+		<select id="month">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+			<option>7</option>
+			<option>8</option>
+			<option>9</option>
+			<option>10</option>
+			<option>11</option>
+			<option>12</option>
+		</select>
+
+		<input type="button" style="border-radius: 10%; background-color: white; font-weight: bold" id="check_btn" value="Tính số ngày">
+	</p>
+	
+	<div id="inner_here" style="font-weight: bold; font-size: 20px"></div>
+
+	<script type="text/javascript">
+		let check_btn = document.getElementById('check_btn');
+
+		function check(month) {
+			month = parseInt(month);
+			switch (month) {
+				case 1:
+				return "31";
+				case 2:
+				return "28 hoặc 29";
+				case 3:
+				return "31";
+				case 4:
+				return "30";
+				case 5:
+				return "31";
+				case 6:
+				return "30";
+				case 7:
+				return "31";
+				case 8:
+				return "31";
+				case 9:
+				return "30";
+				case 10:
+				return "31";
+				case 11:
+				return "30";
+				case 12:
+				return "31";
+			}
+		}
+
+		function result() {
+			let month = document.getElementById("month").value;
+			document.getElementById("inner_here").innerHTML = "Tháng " + month + " có " + check(month) + " ngày";
+		}
+
+		function docReady() {
+			check_btn.addEventListener("click", result);
+		}
+
+		window.onload = docReady;
+	</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<table style="text-align: center; width: 900px">
+		<tr>
+			<th>Nhập vào cân nặng (kg):</th>
+			<th>Nhập vào chiều cao (m):</th>
+			<th></th>
+		</tr>
+
+		<tr>
+			<td>
+				<input type="number" id="weight">
+			</td>
+			<td>
+				<input type="number" id="height">
+			</td>
+			<td>
+				<input type="button" id="check_btn" value="Check">
+			</td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+		let check_btn = document.getElementById("check_btn");
+
+		function resultBMI(weight, height) {
+			weight = parseFloat(weight);
+			height = parseFloat(height);
+			return weight / (height ** 2);
+		}
+
+		function check() {
+			let weight = document.getElementById("weight");
+			let height = document.getElementById("height");
+			let bmi = resultBMI(weight.value, height.value);
+
+			if (bmi < 18.5) {
+				alert("Underweight");
+			} else if (bmi < 25.0) {
+				alert("Normal");
+			} else if (bmi < 30.0) {
+				alert("Overweight");
+			} else {
+				alert("Obese");
+			}
+		}
+
+		function docReady() {
+			check_btn.addEventListener("click", check);
+		}
+
+		window.onload = docReady;
+	</script>
+</body>
+</html>

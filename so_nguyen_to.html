@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let number = +prompt("Số lượng số nguyên tố");
+		let count = 0;
+		let N = 2;
+
+		function isPrimeNumber() {
+			if (N % 2 == 0) {
+				return false;
+			}
+
+			for (let i = 3; i < (N/2); i += 2) {
+				if (N % i == 0) {
+					return false;
+				}
+			}
+
+			return true;
+		}
+
+		while (count < number) {
+			if(isPrimeNumber()) {
+				document.write(N + "<br>");
+				count++;
+			};
+			N++;
+		}
+	</script>
+</body>
+</html>

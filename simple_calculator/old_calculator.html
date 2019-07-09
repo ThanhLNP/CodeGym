@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	table{
+		border: 5px solid black;
+		border-collapse: collapse;
+		text-align: center;
+	}
+	td{
+		padding: 10px;
+	}
+	button{
+		font-family: Palatino;
+		font-size: 20px;
+		font-weight: 500;
+		color: blue;
+		width: 35px;
+		height: 30px;
+	}
+	input{
+		border: 1px solid black;
+		text-align: right;
+		vertical-align: middle;
+		font-family: Palatino;
+		font-size: 20px;
+		font-weight: 500;
+		color: blue;
+		width: 210px;
+		height: 30px;
+	}
+</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td colspan="4"><input type="number" id="display" value="0" readonly></div></td>
+
+		</tr>
+		<tr>
+			<td><button type="button" class="number" id="1">1</button></td>
+			<td><button type="button" class="number" id="2">2</button></td>
+			<td><button type="button" class="number" id="3">3</button></td>
+			<td><button type="button" class="operation" id="+">+</button></td>
+		</tr>
+		<tr>
+			<td><button type="button" class="number" id="4">4</button></td>
+			<td><button type="button" class="number" id="5">5</button></td>
+			<td><button type="button" class="number" id="6">6</button></td>
+			<td><button type="button" class="operation" id="-">-</button></td>
+		</tr>
+		<tr>
+			<td><button type="button" class="number" id="7">7</button></td>
+			<td><button type="button" class="number" id="8">8</button></td>
+			<td><button type="button" class="number" id="9">9</button></td>
+			<td><button type="button" class="operation" id="x">x</button></td>
+		</tr>
+		<tr>
+			<td><button type="button" id="refresh">C</button></td>
+			<td><button type="button" class="number" id="0">0</button></td>
+			<td><button type="button" id="equal">=</button></td>
+			<td><button type="button" class="operation" id="/">/</button></td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+		let number_objs = document.getElementsByClassName('number');
+		let operation_objs = document.getElementsByClassName("operation");
+		let equal = document.getElementById("equal");
+		let refresh = document.getElementById("refresh");
+		let display = document.getElementById('display');
+		
+		let number_display = 0;
+		let count_operation = 0;
+		let result = 0;
+		let operation;
+
+		function calculator (operation) {
+			switch (operation) {
+				case "+":
+				result = result + parseInt(number_display);
+				break;
+				case "-":
+				result = result - parseInt(number_display);
+				break;
+				case "x":
+				result = result * parseInt(number_display);
+				break;
+				case "/":
+				result = result / parseInt(number_display);
+				break;
+			}
+		}
+
+		function clickNumber() {
+			let number = this.textContent;
+			if (number_display == 0) {
+				number_display = "";
+			};
+			number_display += number;
+			display.value = number_display;
+			if (count_operation == 0) {
+				result = parseInt(number_display);
+			};
+		}
+
+		function clickOperation() {
+			count_operation++;
+			if (count_operation > 1) {
+				calculator(operation);
+				display.value = result;
+			};
+			operation = this.textContent;
+			number_display = 0;
+		}
+
+		function clickEqual() {
+			if (count_operation > 0) {
+				calculator(operation);
+			};
+			display.value = result;
+			count_operation = 0;
+			number_display = 0;
+		}
+
+		function clickRefresh() {
+			result = 0;
+			count_operation = 0;
+			number_display = 0;
+			display.value = result;
+		}
+
+		function docReady() {
+			for (var i = 0; i < number_objs.length; i++) {
+				number_objs[i].addEventListener("click", clickNumber);
+			};
+			for (var i = 0; i < operation_objs.length; i++) {
+				operation_objs[i].addEventListener("click", clickOperation);
+			};
+			equal.addEventListener("click", clickEqual);
+			refresh.addEventListener("click", clickRefresh);
+		}
+
+		window.onload = docReady;
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Calculator</h1>
+
+	<p>
+		<input type="number" id="first_input">
+		<input type="number" id="second_input">
+	</p>
+	<p>
+		<input type="button" class="operation" value="Addition(+)">
+		<input type="button" class="operation" value="Subtraction(-)">
+		<input type="button" class="operation" value="Multiplication(X)">
+		<input type="button" class="operation" value="Division(/)">
+	</p>
+
+	<p id="inner_here"></p>
+
+	<script type="text/javascript">
+		let operation_objs = document.getElementsByClassName('operation');
+
+		function calculator(operation) {
+			let first_input = document.getElementById('first_input').value;
+			let second_input = document.getElementById("second_input").value;
+			switch (operation) {
+				case "Addition(+)":
+				return first_input + second_input;
+				case "Subtraction(-)":
+				return first_input - second_input;
+				case "Multiplication(X)":
+				return first_input * second_input;
+				case "Division(/)":
+				return first_input / second_input;
+			}
+		}
+
+		function display(operation) {
+			let inner_here = document.getElementById("inner_here");
+			inner_here.innerHTML = "Result " + operation + " : " + calculator(operation);
+		}
+		
+		function clickOperation() {
+			let operation = this.value;
+			display(operation);
+		}
+
+		function docReady() {
+			for (var i = 0; i < operation_objs.length; i++) {
+				operation_objs[i].addEventListener("click", clickOperation);
+			};
+		}
+
+		window.onload = docReady;
+	</script>
+</body>
+</html>

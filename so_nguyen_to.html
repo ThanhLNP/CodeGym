@@ -6,9 +6,10 @@
 </head>
 <body>
 	<script type="text/javascript">
-		let number = +prompt("Số lượng số nguyên tố");
+		let number = +prompt("Nhập số lượng số nguyên tố");
 		let count = 0;
 		let N = 2;
+		let out_put = "Dãy " + number + " số nguyên tố: ";
 
 		function isPrimeNumber() {
 			if (N % 2 == 0) {
@@ -26,11 +27,13 @@
 
 		while (count < number) {
 			if(isPrimeNumber()) {
-				document.write(N + "<br>");
+				out_put += N + ", ";
 				count++;
 			};
 			N++;
 		}
+
+		document.write(out_put);
 	</script>
 </body>
 </html>

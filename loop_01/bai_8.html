@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<input type="button" id="play" value="Chơi">
+	<script type="text/javascript">
+		let play = document.getElementById('play');
+
+		function getRandomInt(min, max) {
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+
+		function clickBtn() {
+			let min = +prompt("Nhập giá trị đầu của đoạn:");
+			let max = +prompt("Nhập giá trị cuối của đoạn:");
+			let number = getRandomInt(min, max);
+			let guess;
+			let failed = true;
+			for (let i = 3; i > 0; i--) {
+				guess = +prompt("Nhập số bạn dự đoán (còn " + i + " lượt):");
+				if (guess == number) {
+					alert("Chúc mừng! Bạn đã đoán đúng.");
+					failed = false;
+					break;
+				} else if (guess > number) {
+					alert("Lớn hơn rồi!");
+				} else {
+					alert("Nhỏ hơn rồi!");
+				}
+			}
+			if (failed) {
+				alert("Bạn đã hết lượt chơi!");
+				alert("Ẩn số là: " + number);
+			}
+
+		}
+
+		function docReady() {
+			play.addEventListener("click", clickBtn)
+		}
+
+		window.onload = docReady;
+	</script>
+</body>
+</html>

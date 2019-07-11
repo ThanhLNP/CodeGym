@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="input">
+	<input type="button" style="border-radius: 10%" id="add" value="Add">
+	<input type="button" style="border-radius: 10%" id="display" value="Display">
+	<p id="inner_here"></p>
+
+	<script type="text/javascript">
+		let input = document.getElementById("input");
+		let add_btn = document.getElementById('add');
+		let display_btn = document.getElementById('display');
+		let inner_here = document.getElementById("inner_here");
+
+		let x = 0;
+		let array = [];
+
+		function clickAdd() {
+			array[x] = input.value;
+			alert("Element " + array[x] + " added at index " + x);
+			x++;
+			input.value = "";
+		}
+
+		function clickDisplay() {
+			let sout = "<hr>";
+			for (let i = 0; i < array.length; i++) {
+				sout += "Element " + i + " = " + array[i] + "<br>";
+			}
+			inner_here.innerHTML = sout;
+		}
+
+		function docReady() {
+			add_btn.addEventListener("click", clickAdd);
+			display_btn.addEventListener("click", clickDisplay);
+		}
+
+		window.onload = docReady;
+	</script>
+</body>
+</html>

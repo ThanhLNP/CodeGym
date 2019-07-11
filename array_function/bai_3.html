@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let str = prompt("Nhập vào một chuỗi bất kỳ");
+		let UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		let LOWER = "abcdefghijklmnopqrstuvwxyz";
+		let result = [];
+
+		for (let i = 0; i < str.length; i++) {
+			if (UPPER.indexOf(str[i]) != -1) {
+				result.push(str[i].toLowerCase());
+			} else if (LOWER.indexOf(str[i]) != -1) {
+				result.push(str[i].toUpperCase());
+			} else {
+				result.push(str[i]);
+			}
+		}
+
+		alert("Kết quả: " + result.join(""));
+	</script>
+</body>
+</html>

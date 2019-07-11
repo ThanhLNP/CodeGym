@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	let input = prompt("Nhập vào một dãy số");
+	let input_str = input.toString();
+	let result = [input_str[0]];
+
+	for (let i = 1; i < input_str.length; i++) {
+		if ((input_str[i-1] % 2 == 0) && (input_str[i] % 2 == 0)) {
+			result.push("-", input_str[i]);
+		} else {
+			result.push(input_str[i]);
+		}
+	}
+
+	alert("Kết quả: " + result.join(""));
+</script>
+</body>
+</html>

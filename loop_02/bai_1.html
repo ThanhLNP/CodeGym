@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let first_number = 0;
+		let second_number = 1;
+		let fibonacci;
+		let i = 1;
+		let input = +prompt("Bạn muốn hiển thị bao nhiêu số?", 1);
+		let sout = "Dãy " + input + " số trong dãy Fibonacci: 1, ";
+		while (i < input) {
+			fibonacci = first_number + second_number;
+			first_number = second_number;
+			second_number = fibonacci;
+			sout += fibonacci + ", ";
+			i++;
+		}
+		document.write(sout);
+	</script>
+</body>
+</html>

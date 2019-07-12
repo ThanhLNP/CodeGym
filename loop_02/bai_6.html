@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let r = +prompt("Nhập bán kính hình trái tim");
+		let width = r * 2;
+		let height = (r + 1) * 2;
+		let sout = "";
+
+		function heart(x, y) {
+			let draw1 = Math.sqrt(r ** 2 - (x - r) ** 2) + Math.sqrt(Math.abs(x - r)) + r;
+			let draw2 = - Math.sqrt(r ** 2 - (x - r) ** 2) + Math.sqrt(Math.abs(x - r)) + r;
+			return y == Math.round(draw1) || y == Math.round(draw2);
+		}
+
+		for (let i = height - 1; i >= 0; i--) {
+			for (let k = 0; k <= width; k++) {
+				if (heart(k, i)) {
+					sout += "*&ensp;&nbsp;";
+				} else {
+					sout += "&ensp;&ensp;&nbsp;";
+				}
+			}
+			sout += "<br>";
+		}
+		
+		document.write(sout);
+	</script>
+</body>
+</html>

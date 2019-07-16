@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let arr_star = ["polaris", "aldebaran", "deneb", "vega", "altair", "dubhe", "regulus"];
+		let arr_constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+		function findStar(input) {
+			for (let i = 0; i < arr_star.length; i++) {
+				if (input == arr_star[i]) {
+					return i;
+				}
+			}
+
+			return -1;
+		}
+
+		function alertConstellation(input) {
+			input = input.toLowerCase();
+			let i = findStar(input);
+			if (i != -1) {
+				alert("Chòm sao tương ứng: " + arr_constellation[i]);
+			} else {
+				alert("Không tìm thấy ngôi sao nào!");
+			}
+		}
+
+		let name_star = prompt("Nhập tên ngôi sao");
+		alertConstellation(name_star);
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>Feet</td>
+			<td>Meters</td>
+		</tr>
+		<tr>
+			<td><input type="number" id="feet" value="0"></td>
+			<td><input type="number" id="meter" value="0"></td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+		function feetToMeter(feet) {
+			return feet * 0.305;
+		}
+
+		function meterToFeet(meter) {
+			return meter * 3.279;
+		}
+
+		function outputMeter() {
+			meter.value = feetToMeter(feet.value);
+		}
+
+		function outputFeet() {
+			feet.value = meterToFeet(meter.value);
+		}
+
+		function docReady() {
+			let feet = document.getElementById('feet');
+			feet.addEventListener("input", outputMeter);
+
+			let meter = document.getElementById("meter");
+			meter.addEventListener("input", outputFeet);
+		}
+
+		window.onload = docReady;
+	</script>
+</body>
+</html>

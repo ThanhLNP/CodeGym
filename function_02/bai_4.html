@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let arr_input = [];
+
+		for (let i = 0; i < 3; i++) {
+			arr_input[i] = prompt("Nhập vào ký tự thứ " + (i + 1) + ":");
+		}
+		
+		function isNumber(input) {
+			if (input.length == 1) {
+				return !isNaN(input);
+			} else {
+				return false;
+			}
+		}
+
+		for (let i = 0; i < arr_input.length; i++) {
+			if (isNumber(arr_input[i])) {
+				alert(arr_input[i] + " là ký tự số!");
+			} else {
+				alert(arr_input[i] + " không phải là ký tự số!");
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let first_num = +prompt("Nhập số nguyên thứ nhất");
+		let second_num = +prompt("Nhập số nguyên thứ hai");
+		let input = [first_num, second_num];
+
+		function swap(arr) {
+			let swap = arr[0];
+			arr[0] = arr[1];
+			arr[1] = swap;
+		}
+
+		swap(input);
+
+		for (let i = 0; i < input.length; i++) {
+			alert("Số thứ " + (i + 1) + ": " + input[i]);
+		}
+	</script>
+</body>
+</html>

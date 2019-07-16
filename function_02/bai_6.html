@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let input = prompt("Nhập vào một số bất kỳ");
+
+		function isInt(number) {
+			return parseInt(number) == number && number > 0;
+		}
+
+		if (isInt(input)) {
+			alert(input + " là số nguyên dương");
+		} else {
+			alert(input + " không phải là số nguyên dương");
+		}
+	</script>
+</body>
+</html>

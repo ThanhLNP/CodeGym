@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let string = prompt("Nhập chuỗi");
+		let arr_str = [];
+		for (let i = 0; i < string.length; i++) {
+			arr_str[i] = string.charAt(i);
+		}
+
+		let input_character = prompt("Nhập vào ký tự cần tìm");
+
+		function findCharacter(arr, character) {
+			let count = 0;
+			for (let i = 0; i < arr.length; i++) {
+				if (arr[i] == character) {
+					count++;
+				}
+			}
+			if (count > 0) {
+				return count;
+			} else {
+				return -1;
+			}
+		}
+
+		let i = findCharacter(string, input_character);
+		if (i != -1) {
+			alert("Ký tự " + input_character + " xuất hiện " + i + " lần");
+		} else {
+			alert("Ký tự cần tìm không có trong mảng!");
+		}
+	</script>
+</body>
+</html>

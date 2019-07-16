@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let length = +prompt("Nhập số phần tử của mảng số nguyên");
+		let input = [];
+		for (let i = 0; i < length; i++) {
+			input[i] = +prompt("Nhập số nguyên thứ " + (i+1));
+		}
+
+		function swap(arr) {
+			let start = 0;
+			let end = arr.length - 1;
+			let swap;
+			while (start < end) {
+				swap = arr[start];
+				arr[start] = arr[end];
+				arr[end] = swap;
+				start++;
+				end--;
+			}
+		}
+
+		document.write("Mảng trước khi đảo ngược: ");
+		document.write(input.join(", "));
+		document.write("<br>");
+		swap(input);
+		document.write("Mảng sau khi đảo ngược: ");
+		document.write(input.join(", "));
+	</script>
+</body>
+</html>

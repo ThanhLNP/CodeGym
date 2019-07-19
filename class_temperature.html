@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Temperature {
+			setC(c) {
+				if (c < -273.15) {
+					this.c = -273.15;
+					alert("Không thể thấp hơn -273.15 độ C! Thiết lập mặc định: -273.15");
+				} else {
+					this.c = c;
+				}
+			}
+			getC() {
+				return this.c;
+			}
+			changeToF() {
+				return this.c * 1.8 + 32;
+			}
+			changeToK() {
+				return this.c + 273.15;
+			}
+		}
+
+		let temperature = new Temperature();
+		temperature.setC(25);
+		document.write("Độ C: " + temperature.getC() + "<br>");
+		document.write("Độ F: " + temperature.changeToF() + "<br>");
+		document.write("Độ K: " + temperature.changeToK() + "<br>");
+
+	</script>
+</body>
+</html>

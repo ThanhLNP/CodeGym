@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<center>
+		<h2>Type anything slowly</h2>
+		<textarea cols="40" rows="10" id="txt"></textarea>
+	</center>
+	<script type="text/javascript">
+		let fake = "I love you! Pặc pặc.";
+		let n = "";
+
+		function typeTextarea() {
+			let j = txt.value.length;
+			if (j > 0) {
+				for (let i = 0; i < j; i++) {
+					n += fake.charAt(i);
+					if (i == fake.length) {
+						n = "";
+					}
+				}
+			}
+			txt.value = n;
+			n = "";
+			setTimeout(typeTextarea, 1);
+		}
+
+		function docReady() {
+			let txt = document.getElementById('txt');
+			txt.addEventListener("keydown", typeTextarea);
+		}
+
+		window.onload = docReady;
+	</script>
+</body>
+</html>

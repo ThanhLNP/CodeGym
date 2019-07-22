@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function isUSZipCode(str) {
+			let regexp = /^[0-9]{5}(?:-[0-9]{4})?$/;
+			return regexp.test(str);
+		}
+
+		let arr = ["03201-2150", "7892"];
+
+		for (let i = 0; i < arr.length; i++) {
+			document.write(arr[i]);
+			
+			if (isUSZipCode(arr[i])) {
+				document.write(" is US zip code<br>");
+			} else {
+				document.write(" is not US zip code<br>");
+			}
+		}
+	</script>
+</body>
+</html>

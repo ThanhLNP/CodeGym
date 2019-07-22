@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function isFirstLetterUpperCase(str) {
+			let regexp = /^[A-Z]/;
+			if (regexp.test(str)) {
+				return "String's first character is uppercase";
+			} else {
+				return "String's first character is not uppercase";
+			}
+		}
+
+		let arr = ["Abcd", "abcd", "Nguyen van Nam", "NGUYEN VAN NAM", "nguyen van Nam"];
+
+		for (let i = 0; i < arr.length; i++) {
+			alert(arr[i] + ": " + isFirstLetterUpperCase(arr[i]));
+		}
+	</script>
+</body>
+</html>

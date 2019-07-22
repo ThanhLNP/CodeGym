@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function insertionsort(arr) {
+			arr.sort(function(a, b) {return a - b});
+		}
+
+		function dispArr(arr) {
+			for (let i = 0; i < arr.length; i++) {
+				document.write(arr[i] + " ");
+				if (i % 10 == 9) {
+					document.write("<br>");
+				}
+			}
+			document.write("<br>");
+		}
+
+		function binSearch(arr, data) {
+			for (let i = 0; i < arr.length; i++) {
+				if (arr[i] == data) {
+					return i;
+				}
+			}
+		}
+
+		function count(arr, data) {
+			let count = 0;
+			let position = binSearch(arr, data);
+
+			if (position > -1) {
+				++count;
+
+				for (let i = position -1; i > 0; i--) {
+					if (arr[i] == data) {
+						++count;
+					} else {
+						break;
+					}
+				}
+
+				for (let i = position + 1; i < arr.length; i++) {
+					if (arr[i] == data) {
+						++count;
+					} else {
+						break;
+					}
+				}
+			}
+
+			return count;
+		}
+
+		let nums = [];
+		for (let i = 0; i < 100; i++) {
+			nums[i] = Math.floor(Math.random() * 101);
+		}
+
+		insertionsort(nums);
+		dispArr(nums);
+
+		let val = +prompt("Enter a value to count:");
+		let retVal = count(nums, val);
+
+		document.write("Enter a value to search for: " + val + ".<br>");
+		document.write("Found " + retVal + " occurrences of " + val + ".");
+	</script>
+</body>
+</html>

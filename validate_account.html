@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function isValidAccount(str) {
+			let regexp = /^[_a-z0-9]{6,}$/;
+			return regexp.test(str);
+		}
+
+		let arr = ["123abc_", "_abc123", "______", "123456", "abcdefg", ".@", "12345", "1234_", "abcde"];
+
+		for (let i = 0; i < arr.length; i++) {
+			document.write(arr[i]);
+			
+			if (isValidAccount(arr[i])) {
+				document.write(" is valid account<br>");
+			} else {
+				document.write(" is not valid account<br>");
+			}
+		}
+	</script>
+</body>
+</html>

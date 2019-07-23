@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function isValidEmail(email) {
+			let regexp = /^[A-Za-z0-9]+@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+			return regexp.test(email);
+		}
+
+		let arr = ["a@gmail.com", "ab@yahoo.com", "abc@hotmail.com", "@gmail.com", "ab@gmail.", "@#abc@gmail.com"];
+
+		for (let i = 0; i < arr.length; i++) {
+			document.write(arr[i]);
+			
+			if (isValidEmail(arr[i])) {
+				document.write(" is valid email<br>");
+			} else {
+				document.write(" is not valid email<br>");
+			}
+		}
+	</script>
+</body>
+</html>

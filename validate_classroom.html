@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function isValidClassroom(str) {
+			let regexp = /^[CAP]([0-9]{4})[GHIKLM]$/;
+			return regexp.test(str);
+		}
+
+		let arr = ["C0318G", "M0318G", "P0323A"];
+
+		for (let i = 0; i < arr.length; i++) {
+			document.write(arr[i]);
+			
+			if (isValidClassroom(arr[i])) {
+				document.write(" is valid class name<br>");
+			} else {
+				document.write(" is not valid class name<br>");
+			}
+		}
+	</script>
+</body>
+</html>

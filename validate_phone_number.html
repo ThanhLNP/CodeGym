@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function isValidPhoneNumber(str) {
+			let regexp = /^\([0-9]{2}\)-\(0[0-9]{9}\)$/;
+			return regexp.test(str);
+		}
+
+		let arr = ["(84)-(0978489648)", "(a8)-(22222222)"];
+
+		for (let i = 0; i < arr.length; i++) {
+			document.write(arr[i]);
+			
+			if (isValidPhoneNumber(arr[i])) {
+				document.write(" is valid phone number<br>");
+			} else {
+				document.write(" is not valid phone number<br>");
+			}
+		}
+	</script>
+</body>
+</html>

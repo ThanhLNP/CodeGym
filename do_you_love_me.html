@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 style="position: absolute; left: 200px; top: 100px;">Do you love me?</h1>
+	<button type="button" id="yes" style="position: absolute; left: 200px; top: 160px;">YES</button>
+	<button type="button" id="no" style="position: absolute; left: 300px; top: 160px;">NO</button>
+
+	<script>
+		function yes() {
+			alert("<3");
+		}
+
+		function no() {
+			let a = Math.round(Math.random() * window.innerWidth);
+			let b = Math.round(Math.random() * window.innerHeight);
+
+			no_btn.style.left = a +'px';
+			no_btn.style.top = b +'px';
+		}
+
+		function docReady() {
+			yes_btn = document.getElementById("yes");
+			no_btn = document.getElementById("no");
+
+			yes_btn.addEventListener("click", yes);
+			no_btn.addEventListener("mousemove", no);
+		}
+
+		window.onload = docReady;
+	</script>
+</body>
+</html>

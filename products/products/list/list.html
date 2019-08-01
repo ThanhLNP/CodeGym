@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thư viện tăng</title>
+	<link rel="shortcut icon" href="../favicon.ico">
+
+	<link rel="stylesheet" type="text/css" href="../../bootstrap-4.3.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="list.css">
+
+	<link rel="stylesheet" href="../about/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+
+	<script type="text/javascript" src="../../jquery/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="../../bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="../../bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md fixed-top navbar-dark" style="background-color: rgba(39,39,43,.85)">
+	<a class="navbar-brand ml-4 mr-4" href="https://worldoftanks.asia/" target="_blank"><img src="../logo2.png" height="40"></a>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	<ul class="navbar-nav mr-auto">
+		<li class="nav-item"><a class="nav-link mr-3" href="../home/home.html">Trang chủ</a></li>
+  
+		<li class="nav-item dropdown active">
+		<a class="nav-link dropdown-toggle mr-3" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Thư viện tăng</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			<a class="dropdown-item" href="../list/list.html">Danh sách</a>
+        	<div class="dropdown-divider"></div>
+        	<a class="dropdown-item" href="../list/edit.html">Chỉnh sửa</a>
+        </div>
+		</li>
+
+		<li class="nav-item"><a class="nav-link mr-3" href="../about/about.html">Giới thiệu</a></li>
+	</ul>
+	</div>
+</nav>
+
+<div class="wrapper">
+	<div class="poster"><img src="dunkirkposter.jpg" class="pl1"></div>
+
+	<div class="container">
+		<div class="ditable">
+			<div class="dititle">Danh sách tăng thiết giáp</div>
+			<div class="diheading">
+				<div class="o">Tên</div>
+				<div class="o">Quốc gia</div>
+				<div class="o">Loại</div>
+				<div class="o">Kíp lái</div>
+				<div class="o">So sánh</div>
+			</div>
+			<div class="hang click" id="">
+				<div class="o"></div>
+				<div class="o"></div>
+				<div class="o"></div>
+				<div class="o" style="text-align: center"></div>
+				<div class="o" style="text-align: center"><i class="fa fa-plus circle circle--small"></i></div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="poster"><img src="furyposter.jpg" class="pr1"></div>
+</div>
+
+<script src="data.js"></script>
+<script src="list.js"></script>
+
+</body>
+</html>

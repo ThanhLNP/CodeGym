@@ -35,7 +35,7 @@
 <body>
 	<table>
 		<tr>
-			<td colspan="4"><input type="number" id="display" value="0" readonly></div></td>
+			<td colspan="4"><input type="text" id="display" value="0" readonly></div></td>
 		</tr>
 		<tr>
 			<td><button type="button" class="number">1</button></td>
@@ -53,7 +53,7 @@
 			<td><button type="button" class="number">7</button></td>
 			<td><button type="button" class="number">8</button></td>
 			<td><button type="button" class="number">9</button></td>
-			<td><button type="button" class="operation">x</button></td>
+			<td><button type="button" class="operation">*</button></td>
 		</tr>
 		<tr>
 			<td><button type="button" id="refresh">C</button></td>
@@ -68,74 +68,31 @@
 		let operation_objs = document.getElementsByClassName("operation");
 		let equal = document.getElementById("equal");
 		let refresh = document.getElementById("refresh");
-		let display = document.getElementById('display');
-		
-		let number_display = 0;
-		let count_operation = 0;
-		let result = 0;
-		let operation;
 
-		function calculator (operation) {
-			switch (operation) {
-				case "+":
-				result = result + parseInt(number_display);
-				break;
-				case "-":
-				result = result - parseInt(number_display);
-				break;
-				case "x":
-				result = result * parseInt(number_display);
-				break;
-				case "/":
-				result = result / parseInt(number_display);
-				break;
-			}
-		}
-
-		function clickNumber() {
-			let number = this.textContent;
-			if (number_display == 0) {
-				number_display = "";
-			};
-			number_display += number;
-			display.value = number_display;
-			if (count_operation == 0) {
-				result = parseInt(number_display);
-			};
-		}
-
-		function clickOperation() {
-			count_operation++;
-			if (count_operation > 1) {
-				calculator(operation);
-				display.value = result;
-			};
-			operation = this.textContent;
-			number_display = 0;
+		function clickRefresh() {
+			display.value = 0;
 		}
 
 		function clickEqual() {
-			if (count_operation > 0) {
-				calculator(operation);
-			};
-			display.value = result;
-			count_operation = 0;
-			number_display = 0;
+			display.value = eval(display.value);
 		}
 
-		function clickRefresh() {
-			result = 0;
-			count_operation = 0;
-			number_display = 0;
-			display.value = result;
+		function expression() {
+			if (display.value == 0) {
+				if (this.textContent != "*" && this.textContent != "/") {
+					display.value = this.textContent;
+				}
+			} else {
+				display.value += this.textContent;
+			}
 		}
 
 		function docReady() {
 			for (var i = 0; i < number_objs.length; i++) {
-				number_objs[i].addEventListener("click", clickNumber);
+				number_objs[i].addEventListener("click", expression);
 			};
 			for (var i = 0; i < operation_objs.length; i++) {
-				operation_objs[i].addEventListener("click", clickOperation);
+				operation_objs[i].addEventListener("click", expression);
 			};
 			equal.addEventListener("click", clickEqual);
 			refresh.addEventListener("click", clickRefresh);

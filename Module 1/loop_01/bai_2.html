@@ -1,26 +1,26 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title></title>
+    <meta charset="utf-8">
+    <title></title>
 </head>
 <body>
-	<script type="text/javascript">
-		let temperature;
-		let isGood = false;
-		while (!isGood) {
-			temperature = +prompt("Nhiệt độ hiện tại?");
-			if (temperature > 100) {
-				alert("Nóng quá! Mau giảm nhiệt độ đi!");
-			} else if (temperature < 20) {
-				alert("Lạnh quá! Mau tăng nhiệt độ đi!");
-			} else {
-				alert("Tuyệt vời!");
-				isGood = true;
-			}
+    <script type="text/javascript">
+        let temperature;
+        let isGood = false;
+        while (!isGood) {
+            temperature = +prompt("Nhiệt độ hiện tại?");
+            if (temperature > 100) {
+                alert("Nóng quá! Mau giảm nhiệt độ đi!");
+            } else if (temperature < 20) {
+                alert("Lạnh quá! Mau tăng nhiệt độ đi!");
+            } else {
+                alert("Tuyệt vời!");
+                isGood = true;
+            }
 
-		}
+        }
 
-	</script>
+    </script>
 </body>
 </html>

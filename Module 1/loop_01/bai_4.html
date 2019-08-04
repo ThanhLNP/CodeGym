@@ -1,22 +1,22 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title></title>
+    <meta charset="utf-8">
+    <title></title>
 </head>
 <body>
-<script type="text/javascript">
-	let isDivisibleBy5 = false;
-	let first_number = 0;
-	let second_number = 1;
-	let fibonacci;
-	while (!isDivisibleBy5) {
-		fibonacci = first_number + second_number;
-		first_number = second_number;
-		second_number = fibonacci;
-		isDivisibleBy5 = fibonacci % 5 == 0;
-	}
-	alert("Số đầu tiên trong dãy Fibonacci chia hết cho 5 là: " + fibonacci);
-</script>
+    <script type="text/javascript">
+        let isDivisibleBy5 = false;
+        let first_number = 0;
+        let second_number = 1;
+        let fibonacci;
+        while (!isDivisibleBy5) {
+            fibonacci = first_number + second_number;
+            first_number = second_number;
+            second_number = fibonacci;
+            isDivisibleBy5 = fibonacci % 5 == 0;
+        }
+        alert("Số đầu tiên trong dãy Fibonacci chia hết cho 5 là: " + fibonacci);
+    </script>
 </body>
 </html>

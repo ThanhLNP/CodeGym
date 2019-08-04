@@ -23,13 +23,15 @@ function compare(a, b) {
 class Grid {
     constructor(size) {
         this.size = size;
-
         this.score = 0;
         this.grid = [];
+        this.new_box = [];
         for (let i = 0; i < this.size; i++) {
             this.grid[i] = [];
+            this.new_box[i] = [];
             for (let j = 0; j < this.size; j++) {
                 this.grid[i][j] = 0;
+                this.new_box[i][j] = 0;
             }
         }
     }
@@ -38,8 +40,21 @@ class Grid {
         return this.score;
     }
 
-    getGrid() {
-        return this.grid;
+    getGrid(i, j) {
+        if (arguments.length == 0) {
+            return this.grid;
+        }
+        if (arguments.length == 2) {
+            return this.grid[i][j];
+        }
+    }
+
+    getNewBox(i, j) {
+        return this.new_box[i][j];
+    }
+
+    resetNewBox(i, j) {
+        this.new_box[i][j] = 0;
     }
 
     operate() {
@@ -105,7 +120,7 @@ class Grid {
             let spot = random(options);
             let r = random(1); //[0,1)
             this.grid[spot.x][spot.y] = r > 0.1 ? 2 : 4;
-            //grid_new[spot.x][spot.y] = 1;
+            this.new_box[spot.x][spot.y] = 1;
         }
     }
 }

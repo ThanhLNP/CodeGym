@@ -1,12 +1,13 @@
 ﻿let w = 100;
 let size = 4;
 let grid;
+let playing = false;
 //let grid_new;
 
 //khoi tạo
 function setup() {
     createCanvas(size * w, size * w); //mac định 100x100
- 
+
     grid = new Grid(size);
     //grid_new = blankGrid();
     grid.addNumber();
@@ -19,6 +20,7 @@ function keyPressed() {
     let flipped = false;
     let rotated = false;
     let played = true;
+
     switch (keyCode) {
         case DOWN_ARROW:
             grid.transposeGrid();
@@ -55,10 +57,10 @@ function keyPressed() {
         if (flipped) { //xoay mảng về vị trí ban đầu
             grid.flipGrid();
         }
+
         if (rotated) {
             grid.transposeGrid();
         }
-
 
         if (changed) {
             grid.addNumber();
@@ -66,20 +68,17 @@ function keyPressed() {
 
         updateCanvas();
 
-        let gameover = isGameOver();
-        if (gameover) {
+        if (isGameOver()) {
             alert("GAME OVER! HIGHEST SCORE: " + grid.getScore());
             setup();
         }
 
-        let gamewon = isGameWon();
-        if (gamewon) {
-            let cf = confirm("CONGRATULATIONS! DO YOU WANT TO CONTINUE?");
-            if (cf == false) {
+        if (!playing && isGameWon()) {
+            playing = confirm("CONGRATULATIONS! DO YOU WANT TO CONTINUE?");
+            if (!playing) {
                 setup();
             }
         }
-
     }
 }
 
@@ -92,16 +91,16 @@ function updateCanvas() {
 function drawGrid() {
     for (let i in grid.getGrid()) {
         for (let j in grid.getGrid()) {
-            let val = grid.getGrid()[i][j];
+            let val = grid.getGrid(i, j);
 
-            //if (grid_new[i][j] === 1) { //vẽ đường viền cho ô mới xuất hiện
-            //    stroke(200, 0, 200); //border-color
-            //    strokeWeight(16); //border-width
-            //    grid_new[i][j] = 0;
-            //} else { //đường viền mặc định
+            if (grid.getNewBox(i, j) === 1) { //vẽ đường viền cho ô mới xuất hiện
+                stroke(200, 0, 200); //border-color
+                strokeWeight(16); //border-width
+                grid.resetNewBox(i, j);
+            } else { //đường viền mặc định
                 stroke(0);
                 strokeWeight(4);
-            //}
+            }
 
             if (val != 0) { //màu nền theo giá trị
                 fill(colorsSize(val).color);

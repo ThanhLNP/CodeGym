@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>[Bài tập] Xây dựng lớp mô tả điện thoại</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="mobile.js"></script>
+    <script src="mess.js"></script>
+</head>
+<body onload="ready()">
+    <div class="row">
+        <div class="col-md-6">
+            <!-- star mobi -->
+            <div class="mobi">
+                <div class="status">
+                    <span class="onoff">Status: <span id="nokiaStatus">ON</span></span>
+                    <span class="pin">Pin: <span id="nokiaPin">100%</span></span>
+                    <div style="clear: left"></div>
+                </div>
+
+                <div class="buttoncha">
+                    <input type="button" id="nokiaMess" class="button" value="Messaging">
+                    <input type="button" id="nokiaToSent" class="button" value="ToSent">
+                    <input type="button" id="nokiaInbox" class="button" value="InBox">
+                    <input type="button" id="nokiaSent" class="button" value="Sent">
+                    <input type="button" id="nokiaOnOff" value="On/Off" class="button">
+                </div>
+
+                <div class="input pb-0">
+                    <input type="text" id="nokiaInput" value="">
+                </div>
+
+                <div class="charge">
+                    <center><input type="button" value="charge" id="nokiaCharge"></center>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobi" style="border: 2px solid red;">
+            <div class="status">
+                <span class="onoff">Status: <span id="iphoneStatus">ON</span></span>
+                <span class="pin">Pin: <span id="iphonePin">100%</span></span>
+                <div style="clear: left"></div>
+            </div>
+
+            <div class="buttoncha">
+                <input type="button" id="iphoneMess" class="button" value="Messaging">
+                <input type="button" id="iphoneToSent" class="button" value="ToSent">
+                <input type="button" id="iphoneInbox" class="button" value="InBox">
+                <input type="button" id="iphoneSent" class="button" value="Sent">
+                <input type="button" value="On/Off" class="button" id="iphoneOnOff">
+            </div>
+
+            <div class="input pb-0">
+                <input type="text" id="iphoneInput">
+            </div>
+
+            <div class="charge">
+                <center><input type="button" value="charge" id="iphoneCharge"></center>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

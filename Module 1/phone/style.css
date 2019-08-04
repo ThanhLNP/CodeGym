@@ -1,0 +1,34 @@
+﻿.mobi {
+    border: 2px solid blue;
+    width: 200px;
+    height: 250px;
+}
+
+.status {
+    padding: 5px;
+}
+
+.onoff {
+    float: left;
+}
+
+.pin {
+    margin-left: 30px;
+    float: left;
+}
+
+.button {
+    margin: 2px;
+    padding: 5px;
+    float: left;
+}
+
+.buttoncha {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.input {
+    margin-top: 100px;
+    padding: 7px;
+}

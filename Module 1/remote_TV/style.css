@@ -1,0 +1,109 @@
+﻿body {
+    background-color: azure;
+}
+
+.tivi {
+    float: left;
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 800px;
+    height: 500px;
+    background-position: center;
+    background-size: 800px;
+    background-image: url("tivi.png");
+}
+
+.remote {
+    margin-top: 20px;
+    margin-left: 50px;
+    float: left;
+    border: 5px inset black;
+    border-radius: 25px;
+    width: 200px;
+    height: 500px;
+    background-color: rgb(88, 27, 112);
+}
+
+.numbergroup {
+    border: 0px solid black;
+    width: 170px;
+    height: 290px;
+    position: relative;
+    left: 13px;
+    top: 15px;
+}
+
+.volum {
+    border: 0px solid black;
+    width: 170px;
+    height: 150px;
+    position: relative;
+    left: 13px;
+    top: 30px;
+    border-radius: 10px;
+}
+
+.number {
+    width: 43px;
+    height: 60px;
+    margin-left: 7px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    color: #fdfdfd;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(93, 47, 136);
+}
+
+.volumy {
+    width: 70px;
+    height: 30px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    color: #fafafa;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(93, 47, 136);
+}
+
+.volumx {
+    width: 70px;
+    height: 30px;
+    margin-left: 7px;
+    color: #f8f8f8;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(93, 47, 136);
+}
+
+#channels {
+    border: 0px solid black;
+    background-color: rgb(37, 32, 32);
+    width: 776px;
+    height: 440px;
+    position: relative;
+    top: 5px;
+    left: 10px;
+    background-color: rgb(46, 45, 39);
+}
+
+#video {
+    top: 5px;
+    left: 10px;
+    width: 777px;
+    height: 440px;
+    position: relative;
+}
+
+#status {
+    padding: 0px;
+    margin-left: 115px;
+    border-radius: 30px;
+    text-align: left;
+    cursor: auto;
+    height: 49px;
+    width: 49px;
+    color: rgb(88, 27, 112);
+    background-color: rgb(88, 27, 112);
+}

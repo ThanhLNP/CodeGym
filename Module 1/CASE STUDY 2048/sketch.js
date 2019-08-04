@@ -8,9 +8,9 @@ function setup() {
     createCanvas(size * w, size * w); //mac định 100x100
 
     grid = new Grid(size);
-    //grid_new = blankGrid();
     grid.addNumber();
     grid.addNumber();
+
     updateCanvas();
 }
 

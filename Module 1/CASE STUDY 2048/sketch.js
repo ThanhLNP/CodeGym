@@ -2,7 +2,6 @@
 let size = 4;
 let grid;
 let playing = false;
-//let grid_new;
 
 //khoi tạo
 function setup() {

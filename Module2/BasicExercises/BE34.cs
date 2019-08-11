@@ -8,7 +8,11 @@ namespace BasicExercises
     {
         static void Main()
         {
-
+            Console.Write("Input a string : ");
+            string str = Console.ReadLine();
+            Console.Write("Input specified word: ");
+            string spe_word = Console.ReadLine();
+            Console.WriteLine(str.StartsWith(spe_word) && str[5] == ' ');
         }
     }
 }

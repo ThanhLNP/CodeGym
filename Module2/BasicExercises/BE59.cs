@@ -10,11 +10,11 @@ namespace BasicExercises
         static void Main()
         {
             Console.WriteLine(test_Increasing_Sequence(new int[] { 1, 3, 5, 6, 9 }));
-            Console.WriteLine(test_Increasing_Sequence(new int[] { 0, 10 }));
+            Console.WriteLine(test_Increasing_Sequence(new int[] { 0, 10, 10 }));
             Console.WriteLine(test_Increasing_Sequence(new int[] { 1, 3, 1, 3 }));
         }
 
-        //kiem tra mang co tang nghiem ngat hay ko
+        //kiem tra mang co tang hay ko
         public static bool test_Increasing_Sequence(int[] intArray)
         {
             int[] tempArray = (int[])intArray.Clone();

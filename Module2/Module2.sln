@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicExercises", "BasicExercises\BasicExercises.csproj", "{62B663A3-C67E-4811-B190-5576DF164699}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectOrientedProgramming", "ObjectOrientedProgramming\ObjectOrientedProgramming.csproj", "{64F3C77D-368E-41E4-9A5B-21C445580F6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjectOrientedProgramming", "ObjectOrientedProgramming\ObjectOrientedProgramming.csproj", "{64F3C77D-368E-41E4-9A5B-21C445580F6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures", "DataStructures\DataStructures.csproj", "{4902EDA5-AE06-452A-8367-40E61FDA2627}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{64F3C77D-368E-41E4-9A5B-21C445580F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64F3C77D-368E-41E4-9A5B-21C445580F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64F3C77D-368E-41E4-9A5B-21C445580F6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4902EDA5-AE06-452A-8367-40E61FDA2627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4902EDA5-AE06-452A-8367-40E61FDA2627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4902EDA5-AE06-452A-8367-40E61FDA2627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4902EDA5-AE06-452A-8367-40E61FDA2627}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -19,7 +19,7 @@ namespace DataStructures
         }
     }
 
-    class MyList<E>
+    public class MyList<E>
     {
         private int size = 0;
         private const int DEFAULT_CAPACITY = 10;

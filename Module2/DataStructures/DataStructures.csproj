@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <StartupObject>DataStructures.News.NewsMain</StartupObject>
+    <StartupObject>DataStructures.List</StartupObject>
   </PropertyGroup>
 
 </Project>

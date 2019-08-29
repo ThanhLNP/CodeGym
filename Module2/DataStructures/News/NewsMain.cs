@@ -8,6 +8,7 @@ namespace DataStructures.News
     {
         public static void Main()
         {
+            News news = new News();
             InitMenu();
         }
 
@@ -43,6 +44,7 @@ namespace DataStructures.News
             switch (selected)
             {
                 case 1:
+                    InsertNews();
                     break;
                 case 2:
                     break;
@@ -60,6 +62,11 @@ namespace DataStructures.News
             Console.WriteLine("\n********************");
 
             InitMenu();
+        }
+
+        public static void InsertNews()
+        {
+
         }
     }
 }

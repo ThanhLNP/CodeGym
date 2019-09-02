@@ -38,7 +38,7 @@ namespace DataStructures
             a = (int[])array.Clone();
             Console.WriteLine("----------");
 
-            QuickSort(a);
+            QuickSort(a, 0, a.Length - 1);
             Console.WriteLine(string.Join(", ", a));
             #endregion
 
@@ -56,7 +56,7 @@ namespace DataStructures
             }
             else
             {
-                Console.WriteLine("{0} khong co trong mang!",value);
+                Console.WriteLine("{0} khong co trong mang!", value);
             }
             #endregion
         }
@@ -122,10 +122,59 @@ namespace DataStructures
             }
         }
 
-        public static void QuickSort(int[] array)
+        #region Quick Sort
+        public static void QuickSort(int[] arr, int left, int right)
         {
+            if (left < right)
+            {
+                int pivot = Partition(arr, left, right);
 
+                QuickSort(arr, left, pivot - 1);
+
+                QuickSort(arr, pivot + 1, right);
+            }
         }
+
+        public static int Partition(int[] arr, int left, int right)
+        {
+            int pivot = right;
+
+            right--;
+
+            while (true)
+            {
+                while (left <= right && arr[left] < arr[pivot]) //tranh truong hop IndexOutOfRangeException
+                {
+                    left++;
+                }
+
+                while (left <= right && arr[right] > arr[pivot]) //nhu tren, ghi giong nhau cho dong bo
+                {
+                    right--;
+                }
+
+                if (left >= right) break;
+
+                Swap(arr, left, right);
+
+                left++;
+
+                right--;
+            }
+            //left = right khi co gia tri bang voi gia tri pivot, ko can swap cung dc
+            //left > right nghia la left dang dung o gia tri > gia tri pivot, right dung o gia tri < gia tri pivot
+            Swap(arr, left, pivot);
+
+            return left;
+        }
+
+        public static void Swap(int[] array, int index1, int index2)
+        {
+            int temp = array[index1];
+            array[index1] = array[index2];
+            array[index2] = temp;
+        }
+        #endregion
 
         public static int BinarySearch(int[] array, int value)
         {

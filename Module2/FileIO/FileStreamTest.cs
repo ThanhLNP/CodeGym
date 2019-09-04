@@ -7,44 +7,74 @@ namespace FileIO
     {
         public static class Helper
         {
-            public static string fileName = $"D:\\code-gym\\Module2\\FileIO\\Log_{DateTime.Now.ToString("dd_MM_yyyy")}.txt";
+            private static string fileName = $"D:/code-gym/Module2/FileIO/Log_{DateTime.Now.ToString("dd_MM_yyyy")}.txt";
 
             public static void WriteLog(string message)
             {
                 FileStream file = new FileStream(fileName, FileMode.Append);
                 using (StreamWriter writer = new StreamWriter(file))
                 {
-                    writer.WriteLine($"[Error]:{DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt")}:{message}");
+                    writer.WriteLine($"[Error]: {DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt")}: {message}");
                 }
             }
 
-            public static string ReadLog(string fileName)
+            public static string ReadLog()
             {
-                return string.Empty;
+                string line;
+
+                FileStream fsReader = new FileStream(fileName, FileMode.Open);
+                using (StreamReader reader = new StreamReader(fsReader))
+                {
+                    line = reader.ReadToEnd();
+                }
+
+                return line;
             }
         }
+
         static void Main(string[] args)
         {
-            //FileStream fsReader = new FileStream("C:\\CodeGym\\Practices\\NetCore\\Example1\\Example1\\Text1.txt", FileMode.Open);
-            //using (StreamReader reader = new StreamReader(fsReader))
-            //{
-            //    string line = reader.ReadToEnd();
-            //    Console.WriteLine(line);
-            //}
+            #region Try Catch and File IO
+            try
+            {
+                Console.Write("Input a = ");
+                var a = int.Parse(Console.ReadLine());
+                Console.Write("Input b = ");
+                var b = int.Parse(Console.ReadLine());
+                var result = a / b;
+                Console.WriteLine("{0}/{1}={2}", a, b, result);
+            }
+            catch (DivideByZeroException dze)
+            {
+                Helper.WriteLog(dze.Message);
+                Console.Write(Helper.ReadLog());
+            }
+            catch (Exception ex)
+            {
+                Helper.WriteLog(ex.Message);
+                Console.Write("Something went wrong, please again later.");
+            }
+            finally
+            {
+                Console.WriteLine("Go to finally");
+            }
+            #endregion
 
             #region TextArray
-            FileStream fsArrayWriter = new FileStream("D:/code-gym/Module2/FileIO/TextArray.txt", FileMode.Append);
+            FileStream fsArrayWriter = new FileStream("D:/code-gym/Module2/FileIO/TextArray.txt", FileMode.Create);
             using (StreamWriter arrayWriter = new StreamWriter(fsArrayWriter))
             {
                 Console.Write("intput size of array: ");
                 var n = int.Parse(Console.ReadLine());
                 arrayWriter.WriteLine(n);
+
                 for (int i = 0; i < n; i++)
                 {
                     Console.Write("Input A[{0}]: ", i);
                     var v = Console.ReadLine();
                     arrayWriter.Write(v.ToString() + " ");
                 }
+                arrayWriter.WriteLine();
             }
 
             FileStream fsArrayReader = new FileStream("D:/code-gym/Module2/FileIO/TextArray.txt", FileMode.Open);
@@ -63,20 +93,21 @@ namespace FileIO
             #endregion
 
             #region TextBinary
-            FileStream fsBinaryWriter = new FileStream("D:\\code-gym\\Module2\\FileIO\\TextBinary.txt", FileMode.Append);
+            FileStream fsBinaryWriter = new FileStream("D:/code-gym/Module2/FileIO/TextBinary.txt", FileMode.Create);
             using (BinaryWriter binaryWriter = new BinaryWriter(fsBinaryWriter))
             {
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < 20; i++)
                 {
                     binaryWriter.Write((byte)i++);
                 }
             }
 
-            FileStream fsBinaryReader = new FileStream("D:\\code-gym\\Module2\\FileIO\\TextBinary.txt", FileMode.Open);
-            using (StringReader binaryReader = new StringReader("D:\\code-gym\\Module2\\FileIO\\TextBinary.txt"))
+            FileStream fsBinaryReader = new FileStream("D:/code-gym/Module2/FileIO/TextBinary.txt", FileMode.Open);
+            using (BinaryReader binaryReader = new BinaryReader(fsBinaryReader))
             {
-                var line = binaryReader.ReadLine();
-                Console.WriteLine(line);
+                var line = binaryReader.ReadBytes(10);
+                Console.WriteLine("----------");
+                Console.WriteLine(string.Join(", ", line));
             }
             #endregion
         }

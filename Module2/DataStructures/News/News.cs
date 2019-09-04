@@ -20,20 +20,36 @@ namespace DataStructures.News
         protected string Author { get => author; set => author = value; }
         protected string Content { get => content; set => content = value; }
         protected float AverageRate { get => averageRate; }
+        public int[] RateList { get => rateList; set => rateList = value; }
+
+        public News()
+        {
+
+        }
+
+        public News(int id,string title, string publishDate, string author, string content, int[] rateList)
+        {
+            Id = id;
+            Title = title;
+            PublishDate = publishDate;
+            Author = author;
+            Content = content;
+            RateList = rateList;
+        }
 
         public void Display()
         {
-            Console.WriteLine("{0} {1} {2} {3} {4}", title, publishDate, author, content, averageRate);
+            Console.WriteLine("Title: {0}, Publish date: {1}, Author: {2}, Content: {3}, Average rate: {4}", title, publishDate, author, content, averageRate);
         }
 
         public void Calculate()
         {
-            foreach(int element in rateList)
+            foreach(int element in RateList)
             {
                 averageRate += element;
             }
 
-            averageRate /= rateList.Length;
+            averageRate /= RateList.Length;
         }
     }
 }

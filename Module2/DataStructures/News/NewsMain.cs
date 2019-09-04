@@ -1,14 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Collections;
 
 namespace DataStructures.News
 {
     class NewsMain
     {
+        static int id;
+        static ArrayList newsList = new ArrayList();
         public static void Main()
         {
-            News news = new News();
             InitMenu();
         }
 
@@ -47,8 +47,10 @@ namespace DataStructures.News
                     InsertNews();
                     break;
                 case 2:
+                    ViewList();
                     break;
                 case 3:
+                    CalculateNews();
                     break;
                 case 4:
                     {
@@ -56,7 +58,6 @@ namespace DataStructures.News
                         Environment.Exit(Environment.ExitCode);
                         break;
                     }
-
             }
 
             Console.WriteLine("\n********************");
@@ -66,7 +67,53 @@ namespace DataStructures.News
 
         public static void InsertNews()
         {
+            Console.Write("Title: ");
+            string title = Console.ReadLine();
 
+            Console.Write("Publish date: ");
+            string publishDate = Console.ReadLine();
+
+            Console.Write("Author: ");
+            string author = Console.ReadLine();
+
+            Console.Write("Content: ");
+            string content = Console.ReadLine();
+
+            int[] rateList = new int[3];
+            for(int i =0; i < rateList.Length; i++)
+            {
+                do
+                {
+                    Console.Write("Nhap danh gia lan {0}: ", i + 1);
+                    if (int.TryParse(Console.ReadLine(), out var number))
+                    {
+                        rateList[i] = number;
+                    }
+                }
+                while (rateList[i] < 1 || rateList[i] > 10);
+            }
+
+            News news = new News(id, title, publishDate, author, content, rateList);
+            newsList.Add(news);
+
+            id++;
+        }
+
+        public static void ViewList()
+        {
+            foreach(News news in newsList)
+            {
+                news.Display();
+            }
+        }
+
+        public static void CalculateNews()
+        {
+            foreach (News news in newsList)
+            {
+                news.Calculate();
+                news.Display();
+            }
         }
     }
 }

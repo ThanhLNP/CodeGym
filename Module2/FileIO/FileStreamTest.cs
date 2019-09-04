@@ -33,7 +33,7 @@ namespace FileIO
             //}
 
             #region TextArray
-            FileStream fsArrayWriter = new FileStream("D:\\code-gym\\Module2\\FileIO\\TextArray.txt", FileMode.Append);
+            FileStream fsArrayWriter = new FileStream("D:/code-gym/Module2/FileIO/TextArray.txt", FileMode.Append);
             using (StreamWriter arrayWriter = new StreamWriter(fsArrayWriter))
             {
                 Console.Write("intput size of array: ");
@@ -47,7 +47,7 @@ namespace FileIO
                 }
             }
 
-            FileStream fsArrayReader = new FileStream("D:\\code-gym\\Module2\\FileIO\\TextArray.txt", FileMode.Open);
+            FileStream fsArrayReader = new FileStream("D:/code-gym/Module2/FileIO/TextArray.txt", FileMode.Open);
             using (StreamReader arrayReader = new StreamReader(fsArrayReader))
             {
                 string line1 = arrayReader.ReadLine();

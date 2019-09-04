@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataStructures
 {
-    class StackQueue
+    class StackQueueTest
     {
         public static void Main()
         {

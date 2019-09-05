@@ -15,7 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTest", "XUnitTest\XUni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTest", "NUnitTest\NUnitTest.csproj", "{6846C7E8-6A3E-43F4-8A36-2495F2D0BD12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileIO", "FileIO\FileIO.csproj", "{C8FFA861-5EA0-4CE0-A292-E0DD6A96C3BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileIO", "FileIO\FileIO.csproj", "{C8FFA861-5EA0-4CE0-A292-E0DD6A96C3BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam", "Exam\Exam.csproj", "{8355ACA4-7F3B-47DA-8E9D-033C02579A20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{C8FFA861-5EA0-4CE0-A292-E0DD6A96C3BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8FFA861-5EA0-4CE0-A292-E0DD6A96C3BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8FFA861-5EA0-4CE0-A292-E0DD6A96C3BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8355ACA4-7F3B-47DA-8E9D-033C02579A20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8355ACA4-7F3B-47DA-8E9D-033C02579A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8355ACA4-7F3B-47DA-8E9D-033C02579A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8355ACA4-7F3B-47DA-8E9D-033C02579A20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

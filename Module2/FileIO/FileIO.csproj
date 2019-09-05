@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <StartupObject>FileIO.FileStreamTest</StartupObject>
+    <StartupObject>FileIO.Exercise01</StartupObject>
   </PropertyGroup>
 
 </Project>

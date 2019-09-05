@@ -1,0 +1,3 @@
+Tong gia tri: 10
+Cac so chan: 4 2 
+Day sap xep tang dan: 1 2 3 4

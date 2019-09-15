@@ -17,7 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTest", "NUnitTest\NUni
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileIO", "FileIO\FileIO.csproj", "{C8FFA861-5EA0-4CE0-A292-E0DD6A96C3BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam", "Exam\Exam.csproj", "{8355ACA4-7F3B-47DA-8E9D-033C02579A20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exam", "Exam\Exam.csproj", "{8355ACA4-7F3B-47DA-8E9D-033C02579A20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam2", "Exam2\Exam2.csproj", "{4B5C671F-9780-4B1E-A2AA-C9A9E2C395DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{8355ACA4-7F3B-47DA-8E9D-033C02579A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8355ACA4-7F3B-47DA-8E9D-033C02579A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8355ACA4-7F3B-47DA-8E9D-033C02579A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B5C671F-9780-4B1E-A2AA-C9A9E2C395DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B5C671F-9780-4B1E-A2AA-C9A9E2C395DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B5C671F-9780-4B1E-A2AA-C9A9E2C395DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B5C671F-9780-4B1E-A2AA-C9A9E2C395DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

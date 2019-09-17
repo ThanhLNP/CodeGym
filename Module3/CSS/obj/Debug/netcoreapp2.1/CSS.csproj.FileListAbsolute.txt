@@ -1,0 +1,14 @@
+D:\code-gym\Module3\CSS\bin\Debug\netcoreapp2.1\CSS.deps.json
+D:\code-gym\Module3\CSS\bin\Debug\netcoreapp2.1\CSS.runtimeconfig.json
+D:\code-gym\Module3\CSS\bin\Debug\netcoreapp2.1\CSS.runtimeconfig.dev.json
+D:\code-gym\Module3\CSS\bin\Debug\netcoreapp2.1\CSS.dll
+D:\code-gym\Module3\CSS\bin\Debug\netcoreapp2.1\CSS.pdb
+D:\code-gym\Module3\CSS\obj\Debug\netcoreapp2.1\CSS.csprojAssemblyReference.cache
+D:\code-gym\Module3\CSS\obj\Debug\netcoreapp2.1\CSS.csproj.CoreCompileInputs.cache
+D:\code-gym\Module3\CSS\obj\Debug\netcoreapp2.1\CSS.RazorAssemblyInfo.cache
+D:\code-gym\Module3\CSS\obj\Debug\netcoreapp2.1\CSS.RazorAssemblyInfo.cs
+D:\code-gym\Module3\CSS\obj\Debug\netcoreapp2.1\CSS.AssemblyInfoInputs.cache
+D:\code-gym\Module3\CSS\obj\Debug\netcoreapp2.1\CSS.AssemblyInfo.cs
+D:\code-gym\Module3\CSS\obj\Debug\netcoreapp2.1\CSS.RazorTargetAssemblyInfo.cache
+D:\code-gym\Module3\CSS\obj\Debug\netcoreapp2.1\CSS.dll
+D:\code-gym\Module3\CSS\obj\Debug\netcoreapp2.1\CSS.pdb

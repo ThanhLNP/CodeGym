@@ -1,0 +1,14 @@
+D:\code-gym\Module3\Bootstrap\bin\Debug\netcoreapp2.1\Bootstrap.deps.json
+D:\code-gym\Module3\Bootstrap\bin\Debug\netcoreapp2.1\Bootstrap.runtimeconfig.json
+D:\code-gym\Module3\Bootstrap\bin\Debug\netcoreapp2.1\Bootstrap.runtimeconfig.dev.json
+D:\code-gym\Module3\Bootstrap\bin\Debug\netcoreapp2.1\Bootstrap.dll
+D:\code-gym\Module3\Bootstrap\bin\Debug\netcoreapp2.1\Bootstrap.pdb
+D:\code-gym\Module3\Bootstrap\obj\Debug\netcoreapp2.1\Bootstrap.csprojAssemblyReference.cache
+D:\code-gym\Module3\Bootstrap\obj\Debug\netcoreapp2.1\Bootstrap.csproj.CoreCompileInputs.cache
+D:\code-gym\Module3\Bootstrap\obj\Debug\netcoreapp2.1\Bootstrap.RazorAssemblyInfo.cache
+D:\code-gym\Module3\Bootstrap\obj\Debug\netcoreapp2.1\Bootstrap.RazorAssemblyInfo.cs
+D:\code-gym\Module3\Bootstrap\obj\Debug\netcoreapp2.1\Bootstrap.AssemblyInfoInputs.cache
+D:\code-gym\Module3\Bootstrap\obj\Debug\netcoreapp2.1\Bootstrap.AssemblyInfo.cs
+D:\code-gym\Module3\Bootstrap\obj\Debug\netcoreapp2.1\Bootstrap.RazorTargetAssemblyInfo.cache
+D:\code-gym\Module3\Bootstrap\obj\Debug\netcoreapp2.1\Bootstrap.dll
+D:\code-gym\Module3\Bootstrap\obj\Debug\netcoreapp2.1\Bootstrap.pdb

@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29209.62
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bootstrap", "Bootstrap\Bootstrap.csproj", "{B9ACD150-23DC-4757-A964-FE97FBEA0EB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSS", "CSS\CSS.csproj", "{D57B170B-7EFD-46AF-8496-AEC1BB812855}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSS", "CSS\CSS.csproj", "{D57B170B-7EFD-46AF-8496-AEC1BB812855}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jQuery", "jQuery\jQuery.csproj", "{BA66509E-3F5D-4C48-B395-D57777F62090}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D57B170B-7EFD-46AF-8496-AEC1BB812855}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D57B170B-7EFD-46AF-8496-AEC1BB812855}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D57B170B-7EFD-46AF-8496-AEC1BB812855}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA66509E-3F5D-4C48-B395-D57777F62090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA66509E-3F5D-4C48-B395-D57777F62090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA66509E-3F5D-4C48-B395-D57777F62090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA66509E-3F5D-4C48-B395-D57777F62090}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

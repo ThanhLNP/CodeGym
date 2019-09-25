@@ -16,5 +16,7 @@ namespace EFDatabaseFirst.Models
         public DbSet<tblSkill> tblSkills { get; set; }
         public DbSet<tblEmployee> tblEmployees { get; set; }
         public DbSet<EFDatabaseFirst.Models.EmployeeViewModel> EmployeeViewModel { get; set; }
+        public DbSet<EFDatabaseFirst.Models.EmployeeCreateModel> EmployeeCreateModel { get; set; }
+        public DbSet<EFDatabaseFirst.Models.EmployeeEditModel> EmployeeEditModel { get; set; }
     }
 }

@@ -1,0 +1,69 @@
+﻿@model EFDatabaseFirst.Models.EmployeeCreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    var skills = new List<SkillModel>();
+    skills = ViewBag.Skills;
+}
+
+<h1>Create</h1>
+
+<h4>EmployeeCreateModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-5">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @if (TempData["Message"] != null)
+            {
+                <div class="alert alert-success alert-dismissible">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>@TempData["Message"]</strong>
+                </div>
+            }
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>@TempData["Error"]</strong>
+                </div>
+            }
+            <div class="form-group">
+                <label asp-for="EmployeeName" class="control-label"></label>
+                <input asp-for="EmployeeName" class="form-control" />
+                <span asp-validation-for="EmployeeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SkillID" class="control-label"></label>
+                <select asp-for="SkillID" class="form-control" required>
+                    @foreach (var skill in skills)
+                    {
+                        <option value="@skill.SkillID">@skill.Title</option>
+                    }
+                </select>
+                <span asp-validation-for="SkillID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YearsExperience" class="control-label"></label>
+                <input asp-for="YearsExperience" class="form-control" />
+                <span asp-validation-for="YearsExperience" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

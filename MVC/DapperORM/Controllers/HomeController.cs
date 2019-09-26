@@ -5,16 +5,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using DapperORM.Models;
+using DapperORM.DAL;
 
 namespace DapperORM.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly GroupMeetingService groupMeetingService = new GroupMeetingService();
+
+        #region View List
         public IActionResult Index()
         {
-            return View(GroupMeeting.GetGroupMeetings());
+            return View(groupMeetingService.GetGroupMeetings());
         }
+        #endregion
 
+        #region Create
         [HttpGet]
         public IActionResult AddGroupMeeting()
         {
@@ -22,18 +28,33 @@ namespace DapperORM.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddGroupMeeting([Bind] GroupMeeting groupMeeting)
+        public IActionResult AddGroupMeeting([Bind] GroupMeetingCreate model)
         {
+            var createResult = groupMeetingService.AddGroupMeeting(new GroupMeeting()
+            {
+                Description = model.Description,
+                GroupMeetingDate = model.GroupMeetingDate,
+                GroupMeetingLeadName = model.GroupMeetingLeadName,
+                ProjectName = model.ProjectName,
+                TeamLeadName = model.TeamLeadName,
+            });
             if (ModelState.IsValid)
             {
-                if (GroupMeeting.AddGroupMeeting(groupMeeting) > 0)
+                if (createResult > 0)
                 {
-                    return RedirectToAction("Index");
+                    TempData["Success"] = "Group meeting has been created success";
+                }
+                else
+                {
+                    TempData["Error"] = "Something went wrong, please try again later";
                 }
             }
-            return View(groupMeeting);
+            ModelState.Clear();
+            return View(new GroupMeetingCreate() { GroupMeetingDate = DateTime.Now });
         }
+        #endregion
 
+        #region Edit
         [HttpGet]
         public IActionResult EditMeeting(int? id)
         {
@@ -41,29 +62,40 @@ namespace DapperORM.Controllers
             {
                 return NotFound();
             }
-            GroupMeeting group = GroupMeeting.GetGroupMeetingById(id);
+            GroupMeeting group = groupMeetingService.GetGroupMeetingById(id);
             if (group == null)
                 return NotFound();
             return View(group);
         }
 
         [HttpPost]
-        public IActionResult EditMeeting(int id, [Bind] GroupMeeting groupMeeting)
+        public IActionResult EditMeeting(int id, [Bind] GroupMeetingEdit model)
         {
-            if (id != groupMeeting.Id)
+            if (id != model.Id)
                 return NotFound();
 
             if (ModelState.IsValid)
             {
-                GroupMeeting.UpdateGroupMeeting(groupMeeting);
+                var editResult = groupMeetingService.UpdateGroupMeeting(new GroupMeeting()
+                {
+                    Id = model.Id,
+                    Description = model.Description,
+                    GroupMeetingDate = model.GroupMeetingDate,
+                    GroupMeetingLeadName = model.GroupMeetingLeadName,
+                    ProjectName = model.ProjectName,
+                    TeamLeadName = model.TeamLeadName,
+                });
                 return RedirectToAction("Index");
             }
-            return View(groupMeeting);
+            return View(model);
         }
+        #endregion
 
+        #region Delete
+        [HttpGet]
         public IActionResult DeleteMeeting(int id)
         {
-            GroupMeeting group = GroupMeeting.GetGroupMeetingById(id);
+            GroupMeeting group = groupMeetingService.GetGroupMeetingById(id);
             if (group == null)
             {
                 return NotFound();
@@ -74,12 +106,13 @@ namespace DapperORM.Controllers
         [HttpPost]
         public IActionResult DeleteMeeting(int id, GroupMeeting groupMeeting)
         {
-            if (GroupMeeting.DeleteGroupMeeting(id) > 0)
+            if (groupMeetingService.DeleteGroupMeeting(id) > 0)
             {
                 return RedirectToAction("Index");
             }
             return View(groupMeeting);
         }
+        #endregion
 
         public IActionResult Privacy()
         {

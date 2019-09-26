@@ -1,51 +1,35 @@
-﻿using System;
+﻿using Dapper;
+using DapperORM.Models;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Threading.Tasks;
-using Dapper;
 
-namespace DapperORM.Models
+namespace DapperORM.DAL
 {
-    public class GroupMeeting
+    public class GroupMeetingService : BaseService
     {
-        public int Id { get; set; }
-
-        [Required(ErrorMessage = "Enter Project Name!")]
-        public string ProjectName { get; set; }
-
-        [Required(ErrorMessage = "Enter Group Lead Name!")]
-        public string GroupMeetingLeadName { get; set; }
-
-        [Required(ErrorMessage = "Enter Team Lead Name!")]
-        public string TeamLeadName { get; set; }
-
-        [Required(ErrorMessage = "Enter Description!")]
-        public string Description { get; set; }
-
-        [Required(ErrorMessage = "Enter Group Meeting Date!")]
-        public DateTime GroupMeetingDate { get; set; }
-
-        static string strConnectionString = "Data Source=ThanhLNP;Initial Catalog=EmployeeDB;Integrated Security=True";
-
-        public static IEnumerable<GroupMeeting> GetGroupMeetings()
+        public GroupMeetingService() : base()
         {
-            List<GroupMeeting> groupMeetingsList = new List<GroupMeeting>();
+
+        }
+
+        public IEnumerable<GroupMeetingView> GetGroupMeetings()
+        {
+            List<GroupMeetingView> groupMeetingsList = new List<GroupMeetingView>();
 
             using (IDbConnection con = new SqlConnection(strConnectionString))
             {
                 if (con.State == ConnectionState.Closed)
                     con.Open();
 
-                groupMeetingsList = con.Query<GroupMeeting>("GetGroupMeetingDetails").ToList();
+                groupMeetingsList = con.Query<GroupMeetingView>("GetGroupMeetingDetails").ToList();
             }
 
             return groupMeetingsList;
         }
 
-        public static GroupMeeting GetGroupMeetingById(int? id)
+        public GroupMeeting GetGroupMeetingById(int? id)
         {
             GroupMeeting groupMeeting = new GroupMeeting();
             if (id == null)
@@ -64,7 +48,7 @@ namespace DapperORM.Models
             return groupMeeting;
         }
 
-        public static int AddGroupMeeting(GroupMeeting groupMeeting)
+        public int AddGroupMeeting(GroupMeeting groupMeeting)
         {
             int rowAffected = 0;
             using (IDbConnection con = new SqlConnection(strConnectionString))
@@ -85,7 +69,7 @@ namespace DapperORM.Models
             return rowAffected;
         }
 
-        public static int UpdateGroupMeeting(GroupMeeting groupMeeting)
+        public int UpdateGroupMeeting(GroupMeeting groupMeeting)
         {
             int rowAffected = 0;
 
@@ -107,7 +91,7 @@ namespace DapperORM.Models
             return rowAffected;
         }
 
-        public static int DeleteGroupMeeting(int id)
+        public int DeleteGroupMeeting(int id)
         {
             int rowAffected = 0;
             using (IDbConnection con = new SqlConnection(strConnectionString))

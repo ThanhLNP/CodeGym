@@ -31,4 +31,3 @@ D:\code-gym\MVC\EFDatabaseFirst\obj\Debug\netcoreapp2.2\EFDatabaseFirst.csproj.C
 D:\code-gym\MVC\EFDatabaseFirst\obj\Debug\netcoreapp2.2\Razor\Views\Home\Create.g.cshtml.cs
 D:\code-gym\MVC\EFDatabaseFirst\obj\Debug\netcoreapp2.2\Razor\Views\Home\Details.g.cshtml.cs
 D:\code-gym\MVC\EFDatabaseFirst\obj\Debug\netcoreapp2.2\Razor\Views\Home\Edit.g.cshtml.cs
-D:\code-gym\MVC\EFDatabaseFirst\obj\Debug\netcoreapp2.2\Razor\Views\Home\Delete.g.cshtml.cs

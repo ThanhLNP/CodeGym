@@ -1,0 +1,234 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\code-gym\\WebAPI\\DataManagement.Business\\DataManagement.Business.csproj": {}
+  },
+  "projects": {
+    "D:\\code-gym\\WebAPI\\DataManagement.Business.Interfaces\\DataManagement.Business.Interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\code-gym\\WebAPI\\DataManagement.Business.Interfaces\\DataManagement.Business.Interfaces.csproj",
+        "projectName": "DataManagement.Business.Interfaces",
+        "projectPath": "D:\\code-gym\\WebAPI\\DataManagement.Business.Interfaces\\DataManagement.Business.Interfaces.csproj",
+        "packagesPath": "C:\\Users\\Thanh\\.nuget\\packages\\",
+        "outputPath": "D:\\code-gym\\WebAPI\\DataManagement.Business.Interfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\code-gym\\WebAPI\\DataManagement.Entities\\DataManagement.Entities.csproj": {
+                "projectPath": "D:\\code-gym\\WebAPI\\DataManagement.Entities\\DataManagement.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\code-gym\\WebAPI\\DataManagement.Business\\DataManagement.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\code-gym\\WebAPI\\DataManagement.Business\\DataManagement.Business.csproj",
+        "projectName": "DataManagement.Business",
+        "projectPath": "D:\\code-gym\\WebAPI\\DataManagement.Business\\DataManagement.Business.csproj",
+        "packagesPath": "C:\\Users\\Thanh\\.nuget\\packages\\",
+        "outputPath": "D:\\code-gym\\WebAPI\\DataManagement.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\code-gym\\WebAPI\\DataManagement.Business.Interfaces\\DataManagement.Business.Interfaces.csproj": {
+                "projectPath": "D:\\code-gym\\WebAPI\\DataManagement.Business.Interfaces\\DataManagement.Business.Interfaces.csproj"
+              },
+              "D:\\code-gym\\WebAPI\\DataManagement.Entities\\DataManagement.Entities.csproj": {
+                "projectPath": "D:\\code-gym\\WebAPI\\DataManagement.Entities\\DataManagement.Entities.csproj"
+              },
+              "D:\\code-gym\\WebAPI\\DataManagement.Repository.Interfaces\\DataManagement.Repository.Interfaces.csproj": {
+                "projectPath": "D:\\code-gym\\WebAPI\\DataManagement.Repository.Interfaces\\DataManagement.Repository.Interfaces.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\code-gym\\WebAPI\\DataManagement.Entities\\DataManagement.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\code-gym\\WebAPI\\DataManagement.Entities\\DataManagement.Entities.csproj",
+        "projectName": "DataManagement.Entities",
+        "projectPath": "D:\\code-gym\\WebAPI\\DataManagement.Entities\\DataManagement.Entities.csproj",
+        "packagesPath": "C:\\Users\\Thanh\\.nuget\\packages\\",
+        "outputPath": "D:\\code-gym\\WebAPI\\DataManagement.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\code-gym\\WebAPI\\DataManagement.Repository.Interfaces\\DataManagement.Repository.Interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\code-gym\\WebAPI\\DataManagement.Repository.Interfaces\\DataManagement.Repository.Interfaces.csproj",
+        "projectName": "DataManagement.Repository.Interfaces",
+        "projectPath": "D:\\code-gym\\WebAPI\\DataManagement.Repository.Interfaces\\DataManagement.Repository.Interfaces.csproj",
+        "packagesPath": "C:\\Users\\Thanh\\.nuget\\packages\\",
+        "outputPath": "D:\\code-gym\\WebAPI\\DataManagement.Repository.Interfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\code-gym\\WebAPI\\DataManagement.Entities\\DataManagement.Entities.csproj": {
+                "projectPath": "D:\\code-gym\\WebAPI\\DataManagement.Entities\\DataManagement.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

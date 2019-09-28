@@ -1,0 +1,14 @@
+D:\code-gym\WebAPI\DataManagement.Repository\bin\Debug\netstandard2.0\DataManagement.Entities.dll
+D:\code-gym\WebAPI\DataManagement.Repository\bin\Debug\netstandard2.0\DataManagement.Repository.Interfaces.dll
+D:\code-gym\WebAPI\DataManagement.Repository\obj\Debug\netstandard2.0\DataManagement.Repository.csproj.CoreCompileInputs.cache
+D:\code-gym\WebAPI\DataManagement.Repository\obj\Debug\netstandard2.0\DataManagement.Repository.AssemblyInfoInputs.cache
+D:\code-gym\WebAPI\DataManagement.Repository\obj\Debug\netstandard2.0\DataManagement.Repository.AssemblyInfo.cs
+D:\code-gym\WebAPI\DataManagement.Repository\obj\Debug\netstandard2.0\DataManagement.Repository.csprojAssemblyReference.cache
+D:\code-gym\WebAPI\DataManagement.Repository\bin\Debug\netstandard2.0\DataManagement.Repository.deps.json
+D:\code-gym\WebAPI\DataManagement.Repository\bin\Debug\netstandard2.0\DataManagement.Repository.dll
+D:\code-gym\WebAPI\DataManagement.Repository\bin\Debug\netstandard2.0\DataManagement.Repository.pdb
+D:\code-gym\WebAPI\DataManagement.Repository\bin\Debug\netstandard2.0\DataManagement.Entities.pdb
+D:\code-gym\WebAPI\DataManagement.Repository\bin\Debug\netstandard2.0\DataManagement.Repository.Interfaces.pdb
+D:\code-gym\WebAPI\DataManagement.Repository\obj\Debug\netstandard2.0\DataManagement.Repository.csproj.CopyComplete
+D:\code-gym\WebAPI\DataManagement.Repository\obj\Debug\netstandard2.0\DataManagement.Repository.dll
+D:\code-gym\WebAPI\DataManagement.Repository\obj\Debug\netstandard2.0\DataManagement.Repository.pdb

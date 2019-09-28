@@ -1,0 +1,8 @@
+D:\code-gym\WebAPI\DataManagement.Entities\bin\Debug\netstandard2.0\DataManagement.Entities.deps.json
+D:\code-gym\WebAPI\DataManagement.Entities\bin\Debug\netstandard2.0\DataManagement.Entities.dll
+D:\code-gym\WebAPI\DataManagement.Entities\bin\Debug\netstandard2.0\DataManagement.Entities.pdb
+D:\code-gym\WebAPI\DataManagement.Entities\obj\Debug\netstandard2.0\DataManagement.Entities.csproj.CoreCompileInputs.cache
+D:\code-gym\WebAPI\DataManagement.Entities\obj\Debug\netstandard2.0\DataManagement.Entities.AssemblyInfoInputs.cache
+D:\code-gym\WebAPI\DataManagement.Entities\obj\Debug\netstandard2.0\DataManagement.Entities.AssemblyInfo.cs
+D:\code-gym\WebAPI\DataManagement.Entities\obj\Debug\netstandard2.0\DataManagement.Entities.dll
+D:\code-gym\WebAPI\DataManagement.Entities\obj\Debug\netstandard2.0\DataManagement.Entities.pdb

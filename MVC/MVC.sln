@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeFirstMigrationas", "Cod
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFDatabaseFirst", "EFDatabaseFirst\EFDatabaseFirst.csproj", "{24AFC34B-11E7-4466-A2CC-F16BFBE51A4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperORM", "DapperORM\DapperORM.csproj", "{42F210DD-0C70-443E-A96D-58AB53072106}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperORM", "DapperORM\DapperORM.csproj", "{42F210DD-0C70-443E-A96D-58AB53072106}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

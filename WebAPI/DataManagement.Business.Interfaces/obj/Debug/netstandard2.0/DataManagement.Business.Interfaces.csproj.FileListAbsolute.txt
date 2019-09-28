@@ -1,0 +1,12 @@
+D:\code-gym\WebAPI\DataManagement.Business.Interfaces\bin\Debug\netstandard2.0\DataManagement.Business.Interfaces.deps.json
+D:\code-gym\WebAPI\DataManagement.Business.Interfaces\bin\Debug\netstandard2.0\DataManagement.Business.Interfaces.dll
+D:\code-gym\WebAPI\DataManagement.Business.Interfaces\bin\Debug\netstandard2.0\DataManagement.Business.Interfaces.pdb
+D:\code-gym\WebAPI\DataManagement.Business.Interfaces\bin\Debug\netstandard2.0\DataManagement.Entities.dll
+D:\code-gym\WebAPI\DataManagement.Business.Interfaces\bin\Debug\netstandard2.0\DataManagement.Entities.pdb
+D:\code-gym\WebAPI\DataManagement.Business.Interfaces\obj\Debug\netstandard2.0\DataManagement.Business.Interfaces.csprojAssemblyReference.cache
+D:\code-gym\WebAPI\DataManagement.Business.Interfaces\obj\Debug\netstandard2.0\DataManagement.Business.Interfaces.csproj.CoreCompileInputs.cache
+D:\code-gym\WebAPI\DataManagement.Business.Interfaces\obj\Debug\netstandard2.0\DataManagement.Business.Interfaces.AssemblyInfoInputs.cache
+D:\code-gym\WebAPI\DataManagement.Business.Interfaces\obj\Debug\netstandard2.0\DataManagement.Business.Interfaces.AssemblyInfo.cs
+D:\code-gym\WebAPI\DataManagement.Business.Interfaces\obj\Debug\netstandard2.0\DataManagement.Business.Interfaces.csproj.CopyComplete
+D:\code-gym\WebAPI\DataManagement.Business.Interfaces\obj\Debug\netstandard2.0\DataManagement.Business.Interfaces.dll
+D:\code-gym\WebAPI\DataManagement.Business.Interfaces\obj\Debug\netstandard2.0\DataManagement.Business.Interfaces.pdb

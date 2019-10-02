@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFDatabaseFirst", "EFDataba
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperORM", "DapperORM\DapperORM.csproj", "{42F210DD-0C70-443E-A96D-58AB53072106}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataManagement", "DataManagement\DataManagement.csproj", "{82E0D17B-4DB6-4CBD-800C-B0BCD69969E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{42F210DD-0C70-443E-A96D-58AB53072106}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42F210DD-0C70-443E-A96D-58AB53072106}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42F210DD-0C70-443E-A96D-58AB53072106}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82E0D17B-4DB6-4CBD-800C-B0BCD69969E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82E0D17B-4DB6-4CBD-800C-B0BCD69969E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82E0D17B-4DB6-4CBD-800C-B0BCD69969E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82E0D17B-4DB6-4CBD-800C-B0BCD69969E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

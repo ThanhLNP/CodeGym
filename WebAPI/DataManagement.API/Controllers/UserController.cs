@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 namespace DataManagement.API.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -18,13 +17,15 @@ namespace DataManagement.API.Controllers
 
         // GET api/values
         [HttpGet]
+        [Route("api/user/get")]
         public IEnumerable<User> Get()
         {
             return _userManager.GetAllUser();
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
+        [HttpGet]
+        [Route("api/user/get/{id}")]
         public User Get(int id)
         {
             return _userManager.GetUserById(id);
@@ -32,23 +33,26 @@ namespace DataManagement.API.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] User user)
+        [Route("api/user/create")]
+        public bool Post([FromBody] User user)
         {
-            _userManager.AddUser(user);
+            return _userManager.AddUser(user);
         }
 
         // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] User user)
+        [HttpPut]
+        [Route("api/user/update")]
+        public bool Put([FromBody] User user)
         {
-            _userManager.UpdateUser(user);
+            return _userManager.UpdateUser(user);
         }
 
         // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete]
+        [Route("api/user/delete/{id}")]
+        public bool Delete(int id)
         {
-            _userManager.DeleteUser(id);
+            return _userManager.DeleteUser(id);
         }
     }
 }

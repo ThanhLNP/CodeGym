@@ -48,7 +48,7 @@ namespace DataManagement.Repository
             try
             {
                 DynamicParameters parameters = new DynamicParameters();
-                parameters.Add("@CustomerID", userId);
+                parameters.Add("@UserId", userId);
                 return SqlMapper.Query<User>((SqlConnection)con, "GetUserById", parameters, commandType: StoredProcedure).FirstOrDefault();
             }
             catch (Exception)

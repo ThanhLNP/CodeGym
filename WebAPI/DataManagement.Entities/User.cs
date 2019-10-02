@@ -12,6 +12,5 @@ namespace DataManagement.Entities
         public string LinkedInUrl { get; set; }
         public string TwitterUrl { get; set; }
         public string PersonalWebUrl { get; set; }
-        public bool IsDeleted { get; set; }
     }
 }

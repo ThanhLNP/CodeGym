@@ -1,0 +1,66 @@
+﻿@model BTQLNV.Models.NhanVien
+
+@{
+    ViewData["Title"] = "Edit nhan vien";
+    var phongBan = new List<PhongBanView>();
+    phongBan = ViewBag.PhongBan;
+}
+
+<h1>Edit nhan vien</h1>
+
+<h4>NhanVien</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IDPB" class="control-label"></label>
+                <select asp-for="IDPB" class="form-control">
+                    @foreach (var pb in phongBan)
+                    {
+                        <option value="@pb.ID" selected="@(pb.ID == Model.IDPB)">@pb.MaPB - @pb.TenPB</option>
+                    }
+                </select>
+                <span asp-validation-for="IDPB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ho" class="control-label"></label>
+                <input asp-for="Ho" class="form-control" />
+                <span asp-validation-for="Ho" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ten" class="control-label"></label>
+                <input asp-for="Ten" class="form-control" />
+                <span asp-validation-for="Ten" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiaChi" class="control-label"></label>
+                <input asp-for="DiaChi" class="form-control" />
+                <span asp-validation-for="DiaChi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DienThoai" class="control-label"></label>
+                <input asp-for="DienThoai" class="form-control" />
+                <span asp-validation-for="DienThoai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <input hidden asp-for="MaNV" class="form-control" />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" asp-controller="NhanVien">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

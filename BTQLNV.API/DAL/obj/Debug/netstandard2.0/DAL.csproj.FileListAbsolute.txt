@@ -1,0 +1,12 @@
+D:\code-gym\BTQLNV.API\DAL\bin\Debug\netstandard2.0\Domain.dll
+D:\code-gym\BTQLNV.API\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+D:\code-gym\BTQLNV.API\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+D:\code-gym\BTQLNV.API\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+D:\code-gym\BTQLNV.API\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+D:\code-gym\BTQLNV.API\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+D:\code-gym\BTQLNV.API\DAL\bin\Debug\netstandard2.0\DAL.dll
+D:\code-gym\BTQLNV.API\DAL\bin\Debug\netstandard2.0\DAL.pdb
+D:\code-gym\BTQLNV.API\DAL\bin\Debug\netstandard2.0\Domain.pdb
+D:\code-gym\BTQLNV.API\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+D:\code-gym\BTQLNV.API\DAL\obj\Debug\netstandard2.0\DAL.dll
+D:\code-gym\BTQLNV.API\DAL\obj\Debug\netstandard2.0\DAL.pdb

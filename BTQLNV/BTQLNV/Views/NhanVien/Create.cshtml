@@ -1,0 +1,80 @@
+﻿@model BTQLNV.Models.NhanVien
+
+@{
+    ViewData["Title"] = "Create nhan vien";
+    var phongBan = new List<PhongBanView>();
+    phongBan = ViewBag.PhongBan;
+}
+
+<h1>Create nhan vien</h1>
+
+<h4>NhanVien</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @if (TempData["Success"] != null)
+            {
+                <div class="alert alert-success alert-dismissible">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>@TempData["Success"]</strong>
+                </div>
+            }
+            <div class="form-group">
+                <label asp-for="IDPB" class="control-label"></label>
+                <select asp-for="IDPB" class="form-control">
+                    @foreach (var pb in phongBan)
+                    {
+                    <option value="@pb.ID">@pb.MaPB - @pb.TenPB</option>
+                    }
+                </select>
+                <span asp-validation-for="IDPB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ho" class="control-label"></label>
+                <input asp-for="Ho" class="form-control" />
+                <span asp-validation-for="Ho" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ten" class="control-label"></label>
+                <input asp-for="Ten" class="form-control" />
+                <span asp-validation-for="Ten" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiaChi" class="control-label"></label>
+                <input asp-for="DiaChi" class="form-control" />
+                <span asp-validation-for="DiaChi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DienThoai" class="control-label"></label>
+                <input asp-for="DienThoai" class="form-control" />
+                <span asp-validation-for="DienThoai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" asp-controller="PhongBan" >Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // show the alert
+            setTimeout(function () {
+                $(".alert").alert('close');
+            }, 5000);
+        });
+    </script>
+}

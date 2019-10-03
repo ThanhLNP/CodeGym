@@ -1,0 +1,9 @@
+D:\code-gym\BTQLNV.API\Domain\bin\Debug\netstandard2.0\Domain.deps.json
+D:\code-gym\BTQLNV.API\Domain\bin\Debug\netstandard2.0\Domain.dll
+D:\code-gym\BTQLNV.API\Domain\bin\Debug\netstandard2.0\Domain.pdb
+D:\code-gym\BTQLNV.API\Domain\obj\Debug\netstandard2.0\Domain.csprojAssemblyReference.cache
+D:\code-gym\BTQLNV.API\Domain\obj\Debug\netstandard2.0\Domain.csproj.CoreCompileInputs.cache
+D:\code-gym\BTQLNV.API\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfoInputs.cache
+D:\code-gym\BTQLNV.API\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
+D:\code-gym\BTQLNV.API\Domain\obj\Debug\netstandard2.0\Domain.dll
+D:\code-gym\BTQLNV.API\Domain\obj\Debug\netstandard2.0\Domain.pdb

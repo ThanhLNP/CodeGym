@@ -11,11 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BAL", "BAL\BAL.csproj", "{3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{D82F837A-A785-4AC4-86A3-4AEF6614CB54}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{EB7F2F9D-B309-46D8-A891-3EDC9C781C59}"
-	ProjectSection(SolutionItems) = preProject
-		C:\Users\Thanh\Desktop\SQLQuery1.sql = C:\Users\Thanh\Desktop\SQLQuery1.sql
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

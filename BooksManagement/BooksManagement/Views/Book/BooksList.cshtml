@@ -1,0 +1,60 @@
+﻿@model IEnumerable<BooksManagement.Models.Book.Response.BooksList>
+@using BooksManagement.Models.Book.Request
+@{
+    ViewData["Title"] = "Books List";
+}
+
+<h1>Books List</h1>
+
+<p>
+    @Html.ActionLink("Create New", "AddBook", "Book", null, new { @class = "btn btn-outline-primary" })
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YearPublication)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YearPublication)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Book", "Book", new GetBook() { Id = item.Id }, new { @class = "btn btn-outline-info" }) |
+                    @Html.ActionLink("Delete", "DeleteBook", "Book", new DeleteBook() { Id = item.Id }, new { @class = "btn btn-outline-danger", onClick = "return confirm('Are you sure to delete this item?')" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

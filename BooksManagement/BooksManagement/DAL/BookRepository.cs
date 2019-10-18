@@ -77,5 +77,21 @@ namespace BooksManagement.DAL
                 throw ex;
             }
         }
+
+        public IList<BooksList> BookSearch(BookSearch model)
+        {
+            try
+            {
+                DynamicParameters parameters = new DynamicParameters();
+                parameters.Add("@SearchValue", model.SearchValue);
+                parameters.Add("@SearchId", model.SearchId);
+                IList<BooksList> list = SqlMapper.Query<BooksList>(con, "sp_BookSearch", param: parameters, commandType: CommandType.StoredProcedure).ToList();
+                return list;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -29,3 +29,4 @@ D:\code-gym\BooksManagement\BooksManagement\obj\Debug\netcoreapp2.2\BooksManagem
 D:\code-gym\BooksManagement\BooksManagement\obj\Debug\netcoreapp2.2\Razor\Views\Book\BooksList.g.cshtml.cs
 D:\code-gym\BooksManagement\BooksManagement\obj\Debug\netcoreapp2.2\Razor\Views\Book\AddBook.g.cshtml.cs
 D:\code-gym\BooksManagement\BooksManagement\obj\Debug\netcoreapp2.2\Razor\Views\Book\Book.g.cshtml.cs
+D:\code-gym\BooksManagement\BooksManagement\obj\Debug\netcoreapp2.2\Razor\Views\Book\BookSearch.g.cshtml.cs

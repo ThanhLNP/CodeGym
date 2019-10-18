@@ -18,9 +18,24 @@ namespace BooksManagement.Controllers
             return _categoryRepository.GetCategoryList();
         }
 
+        private List<string> GetSearchList()
+        {
+            List<string> SearchList = new List<string>()
+            {
+                "All",
+                "Name",
+                "Categories",
+                "Author",
+                "Year of publication",
+                "Amount"
+            };
+            return SearchList;
+        }
+
         [HttpGet]
         public IActionResult BooksList()
         {
+            ViewBag.SearchList = GetSearchList();
             return View(_bookRepository.GetBooksList());
         }
 
@@ -69,6 +84,13 @@ namespace BooksManagement.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpPost]
+        public IActionResult BookSearch(BookSearch model)
+        {
+            ViewBag.SearchList = GetSearchList();
+            return View(_bookRepository.BookSearch(model));
         }
     }
 }

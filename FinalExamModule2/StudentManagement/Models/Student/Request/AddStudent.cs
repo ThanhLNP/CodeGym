@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace StudentManagement.Models.Student.Request
 {
     public class AddStudent
     {
+        public int Id { get; set; }
         [Display(Name = "Language")]
         [Required]
         public int LanguageId { get; set; }
@@ -21,6 +19,7 @@ namespace StudentManagement.Models.Student.Request
 
         [Display(Name = "Day of birth")]
         [Required]
+        [DataType(DataType.Date)]
         public DateTime DayOfBirth { get; set; }
 
         [Required]

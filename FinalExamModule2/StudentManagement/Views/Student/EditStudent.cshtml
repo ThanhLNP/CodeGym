@@ -1,0 +1,73 @@
+﻿@model StudentManagement.Models.Student.Response.Student
+@using StudentManagement.Models.Language.Response
+@using StudentManagement.Models.Level.Response
+@{
+    ViewData["Title"] = "EditStudent";
+    var Language = new List<LanguageList>();
+    Language = ViewBag.Language;
+    var Level = new List<AllLevel>();
+    Level = ViewBag.Level;
+}
+
+<h1>EditStudent</h1>
+
+<h4>UpdateStudent</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditStudent">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="LanguageId" class="control-label"></label>
+                <select asp-for="LanguageId" class="form-control">
+                    @foreach (var language in Language)
+                    {
+                        <option value="@language.Id">@language.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="LanguageId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LevelId" class="control-label"></label>
+                <select asp-for="LevelId" class="form-control">
+                    @foreach (var level in Level)
+                    {
+                        <option value="@level.Id">@level.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="LevelId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DayOfBirth" class="control-label"></label>
+                <input asp-for="DayOfBirth" class="form-control" />
+                <span asp-validation-for="DayOfBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Sex" /> @Html.DisplayNameFor(model => model.Sex)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Back to List", "StudentsList", "Student", null, new { @class = "btn btn-outline-dark" })
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

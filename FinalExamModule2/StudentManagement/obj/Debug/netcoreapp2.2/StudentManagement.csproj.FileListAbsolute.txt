@@ -21,3 +21,15 @@ D:\code-gym\FinalExamModule2\StudentManagement\obj\Debug\netcoreapp2.2\Razor\Vie
 D:\code-gym\FinalExamModule2\StudentManagement\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
 D:\code-gym\FinalExamModule2\StudentManagement\obj\Debug\netcoreapp2.2\StudentManagement.RazorTargetAssemblyInfo.cache
 D:\code-gym\FinalExamModule2\StudentManagement\obj\Debug\netcoreapp2.2\StudentManagement.RazorTargetAssemblyInfo.cs
+D:\code-gym\FinalExamModule2\StudentManagement\bin\Debug\netcoreapp2.2\StudentManagement.pdb
+D:\code-gym\FinalExamModule2\StudentManagement\bin\Debug\netcoreapp2.2\StudentManagement.Views.dll
+D:\code-gym\FinalExamModule2\StudentManagement\bin\Debug\netcoreapp2.2\StudentManagement.Views.pdb
+D:\code-gym\FinalExamModule2\StudentManagement\obj\Debug\netcoreapp2.2\StudentManagement.Views.pdb
+D:\code-gym\FinalExamModule2\StudentManagement\obj\Debug\netcoreapp2.2\StudentManagement.dll
+D:\code-gym\FinalExamModule2\StudentManagement\obj\Debug\netcoreapp2.2\StudentManagement.pdb
+D:\code-gym\FinalExamModule2\StudentManagement\obj\Debug\netcoreapp2.2\StudentManagement.csproj.CopyComplete
+D:\code-gym\FinalExamModule2\StudentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Student\StudentsList.g.cshtml.cs
+D:\code-gym\FinalExamModule2\StudentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Student\Student.g.cshtml.cs
+D:\code-gym\FinalExamModule2\StudentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Student\AddStudent.g.cshtml.cs
+D:\code-gym\FinalExamModule2\StudentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Student\EditStudent.g.cshtml.cs
+D:\code-gym\FinalExamModule2\StudentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Student\StudentSearch.g.cshtml.cs

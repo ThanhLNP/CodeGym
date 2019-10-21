@@ -1,0 +1,82 @@
+﻿@model IEnumerable<StudentManagement.Models.Student.Response.Student>
+@using StudentManagement.Models.Student.Request
+@{
+    ViewData["Title"] = "StudentSearch";
+    var SearchList = new List<string>();
+    SearchList = ViewBag.SearchList;
+}
+
+<h1>StudentsList</h1>
+<form action="/" method="post" style="margin-bottom: 10px">
+    <div class="row input-group col-6">
+        <select name="SearchId" class="form-control col-3">
+            @for (int i = 0; i < SearchList.Count(); i++)
+            {
+                <option value="@i">@SearchList[i]</option>
+            }
+        </select>
+        <input type="text" name="SearchValue" class="form-control" />
+        <div class="input-group-btn" style="margin-left:10px">
+            <input class="btn btn-outline-success" type="submit" value="Search" asp-controller="Student" asp-action="StudentSearch" />
+        </div>
+        @Html.ActionLink("Back to List", "StudentsList", "Student", null, new { @class = "btn btn-outline-dark" })
+    </div>
+</form>
+<p>
+    @Html.ActionLink("Create New", "AddStudent", "Student", null, new { @class = "btn btn-outline-primary" })
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LanguageName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LevelName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DayOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LanguageName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LevelName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DayOfBirth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sex)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditStudent", "Student", new GetStudent() { Id = item.Id }, new { @class = "btn btn-outline-info" })  |
+                    @Html.ActionLink("Details", "Student", "Student", new GetStudent() { Id = item.Id }, new { @class = "btn btn-outline-info" }) |
+                    @Html.ActionLink("Delete", "DeleteStudent", "Student", new DeleteStudent() { Id = item.Id }, new { @class = "btn btn-outline-danger", onClick = "return confirm('Are you sure to delete this item?')" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

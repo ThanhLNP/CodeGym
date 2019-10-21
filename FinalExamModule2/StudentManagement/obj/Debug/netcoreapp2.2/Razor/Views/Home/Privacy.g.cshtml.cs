@@ -23,8 +23,23 @@ using StudentManagement.Models;
 
 #line default
 #line hidden
+#line 3 "D:\code-gym\FinalExamModule2\StudentManagement\Views\_ViewImports.cshtml"
+using StudentManagement.Models.Language.Response;
+
+#line default
+#line hidden
+#line 4 "D:\code-gym\FinalExamModule2\StudentManagement\Views\_ViewImports.cshtml"
+using StudentManagement.Models.Level.Response;
+
+#line default
+#line hidden
+#line 5 "D:\code-gym\FinalExamModule2\StudentManagement\Views\_ViewImports.cshtml"
+using StudentManagement.Models.Student;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d8ddb6bffa5a9b264bf8f89038bf03c234083fd3", @"/Views/Home/Privacy.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c7bb6102ef74a0920854243dc02f5efb2e491047", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1e7152929188a974b951a8a80a208507b2a63c03", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Privacy : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

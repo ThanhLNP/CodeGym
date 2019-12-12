@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewData["Title"] = "Danh sách tướng";
+}
+
+<h1>Danh sách tướng</h1>
+
+<a href="javascript:void(0);" class="btn btn-outline-success text-dark" onclick="types.showModalCreate()" style="margin-bottom: 10px;">Tạo mới</a>
+
+<table id="tblHeroes" class="table table-bordered table-hover">
+    <thead class="thead-dark">
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<!-- The Modal -->
+<div class="modal" id="modalDetail">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        <label class="control-label">Vai trò</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="control-label" id="typeNameDetail" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        <label class="control-label">Máu</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="control-label" id="healthDetail" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        <label class="control-label">Máu phục hồi</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="control-label" id="healthRegenDetail" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        <label class="control-label">Sức mạnh công kích</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="control-label" id="attackDamageDetail" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        <label class="control-label">Giáp</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="control-label" id="armorDetail" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        <label class="control-label">Kháng phép</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="control-label" id="magicResistDetail" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        <label class="control-label">Tốc chạy</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="control-label" id="movementSpeedDetail" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <a href="javascript:void(0);" class="btn btn-warning mr-auto" onclick="types.updateTypes()" data-id="">Chỉnh sửa</a>
+                <a href="javascript:void(0);" class="btn btn-danger" onclick="types.updateTypes()" data-id="">Xóa</a>
+                <button type="button" class="btn btn-danger ml-auto" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section css{
+    <link href="~/lib/node_modules/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" />
+}
+
+@section Scripts{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/lib/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/Heroes.js"></script>
+}

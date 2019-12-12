@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewData["Title"] = "Danh sách vai trò";
+}
+
+<h1>Danh sách vai trò</h1>
+
+<a href="javascript:void(0);" class="btn btn-outline-success text-dark" onclick="types.showModalCreate()" style="margin-bottom: 10px;">Tạo mới</a>
+
+<table id="tbl" class="table table-bordered table-hover" width="50%">
+    <thead class="thead-dark">
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<!-- The Modal -->
+<div class="modal" id="modalUpdate">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Chỉnh sửa</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="row form-group">
+                    <div class="col-md-4">
+                        <label class="control-label">Vai trò</label>
+                    </div>
+                    <div class="col-md-8 ">
+                        <input type="text" class="form-control" id="nameUpdate" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <a href="javascript:void(0);" class="btn btn-success mr-auto" onclick="types.updateTypes()" data-id="">Lưu</a>
+                <button type="button" class="btn btn-danger ml-auto" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="modalCreate">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Tạo mới</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="row form-group">
+                    <div class="col-md-4">
+                        <label class="control-label">Vai trò</label>
+                    </div>
+                    <div class="col-md-8 ">
+                        <input type="text" class="form-control" id="nameCreate" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <a href="javascript:void(0);" class="btn btn-success mr-auto" onclick="types.createTypes()">Lưu</a>
+                <button type="button" class="btn btn-danger ml-auto" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section css{
+    <link href="~/lib/node_modules/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" />
+}
+
+@section Scripts{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/lib/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/Types.js"></script>
+}
